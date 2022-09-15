@@ -30,10 +30,10 @@ def return_points():
     if(n==9):
         file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_0+" + str(n) + "00_1+" + str(0) + "00.las"
     if(n>9):
-        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_1+" + str(n-9) + "00_1+" + str(n+1-9) + "00.las"
+        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_1+" + str(n-10) + "00_1+" + str(n+1-10) + "00.las"
+    print("File LAS usato" + file)
     camera = "/Users/danieleligato/Desktop/Thesis/Data/Processed/Ladybug0_1.ori.txt"
     camera_data = pd.read_csv(camera, header=None, delimiter=r"\s+")
-    print("1")
     point_cloud_i = lp.read(file)
     points_i = np.vstack((point_cloud_i.x, point_cloud_i.y, point_cloud_i.z)).transpose()
     colors_i = np.vstack((point_cloud_i.red, point_cloud_i.green, point_cloud_i.blue)).transpose()

@@ -47,8 +47,9 @@ def shift_coords(fotogramma_n):
     points_las_shift['Y'] = (points_las_df['Y'][:] - float(curret_frame[2])) #profondità
     points_las_shift['Z'] = (points_las_df['Z'][:] - float(curret_frame[3])) #altezza
 
-
+    print("Previous frame")
     print(previous_frame[0], previous_frame[1], previous_frame[2], previous_frame[3])
+    print("Current frame")
     print(curret_frame[0],curret_frame[1],curret_frame[2], curret_frame[3])
 
     df = points_las_shift.to_numpy()
@@ -68,20 +69,13 @@ def shift_coords(fotogramma_n):
 
 def find_las(fotogramma):
     fotogramma_n = fotogramma
-
     las_file = 0
-
     if(fotogramma_n < 50):
         las_file = 0
     else:
         las_file = int(fotogramma_n/50)
-
-
     print("Las file: " + str(las_file),"Fotogramma: "+str(fotogramma_n))
-
     return las_file,fotogramma_n
-
-
 
 if __name__ == "__main__":
     n_fotogrammi = 1
@@ -89,7 +83,7 @@ if __name__ == "__main__":
     #for i in range(n_fotogrammi):
      #   las_file,fotogramma_n = find_las(i+1)
 
-    las_file, fotogramma_n = find_las(350) #minimum 2
+    las_file, fotogramma_n = find_las(500) #minimum 2 , inserisci il numero del tuo fotogramma
 
     IMG_FILE = "./Cam1/202107280658_Rectified_" + str(fotogramma_n) + "_Cam1.jpg"
 
