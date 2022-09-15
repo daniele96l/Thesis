@@ -37,7 +37,7 @@ def return_points():
     point_cloud_i = lp.read(file)
     points_i = np.vstack((point_cloud_i.x, point_cloud_i.y, point_cloud_i.z)).transpose()
     colors_i = np.vstack((point_cloud_i.red, point_cloud_i.green, point_cloud_i.blue)).transpose()
-    campionamento = 50
+    campionamento = 60
     points_i = points_i[0::campionamento]
     colors_i = colors_i[0::campionamento]/65535.
     return points_i
