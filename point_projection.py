@@ -124,6 +124,7 @@ class PointProjection():
             :param points: lidar points with shape (num_points, 3) e.g: [[x1, y1, z1], [x2, y2, z2], ...]
             :return: pixel coordinates on image e.g: [[u1, v1], ...]
         """
+        #print("X")
         # See this function to customize frame transformation
         new_points = self.rigid_transform_points(points)
         return cam_to_img_projection(new_points, self.cameramat, self.intrinsic_params)
@@ -185,6 +186,7 @@ class PointProjection():
         new_points = new_points + self.lidar_to_cam_T
         new_points = new_points.T
         # and other rigid transformation here...
+        #print(new_points)
 
         return new_points
 
@@ -195,7 +197,7 @@ def cam_to_img_projection(img_points, cameramat, int_params=None):
     img_points[:, 0] /= img_points[:, 2]
     img_points[:, 1] /= img_points[:, 2]
 
-    # uncomment this sections if considering lens distorsion #########################
+    #uncomment this sections if considering lens distorsion #########################
     # r = (img_points[:, 0]**2 + img_points[:, 1]**2)
     # f_rect = (1 + int_params['k1']*(r**2) + int_params['k2']*(r**4) + int_params['k3']*(r**6))
     # x_rect = img_points[:, 0] * f_rect + 2 * int_params['p1'] * img_points[:, 0] * img_points[:, 1] + int_params['p2'] * (r**2 + 2 * img_points[:, 0]**2)

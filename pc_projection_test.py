@@ -4,13 +4,16 @@ import sys
 #from odt_configs import *
 import pandas as pd
 import numpy as np
+import math
 import cv2
 import las_reader
 import matplotlib.pyplot as plt
 from point_projection import PointProjection
-import open3d as o3d
+#import open3d as o3d
 from math import atan2, degrees, radians
 from scipy.spatial.transform import Rotation as R
+from rilevamenti import sorted_list as signal_list
+import csv
 
 def angle(v1, v2, acute):
 # v1 is your firsr vector
@@ -21,7 +24,7 @@ def angle(v1, v2, acute):
     else:
         return 2 * np.pi - angle
 
-def shift_coords(fotogramma_n):
+def shift_coords(fotogramma_n,las_file):
 
     points_las_shift = pd.DataFrame(columns=['X','Y','Z'])
     las_reader.set_n(las_file)
@@ -39,7 +42,7 @@ def shift_coords(fotogramma_n):
         # Miei radianti = formula(frame_macchina[1] - Frame_macchina[2])
     myradians = math.atan2(float(previous_frame[1]) - float(curret_frame[1]),float(previous_frame[2]) - float(curret_frame[2]))  # boh
     mydegrees = degrees(myradians)  # ci vuole 0 per il frame 50 (170 in termini assoluti)
-    print("La mia rotazione rispetto il punto iniziale " + str(mydegrees))
+    #("La mia rotazione rispetto il punto iniziale " + str(mydegrees))
 
 
     #Coordinate relative = coordinate assolute nuvola - coordinate assolute macchina
@@ -47,10 +50,10 @@ def shift_coords(fotogramma_n):
     points_las_shift['Y'] = (points_las_df['Y'][:] - float(curret_frame[2])) #profondità
     points_las_shift['Z'] = (points_las_df['Z'][:] - float(curret_frame[3])) #altezza
 
-    print("Previous frame")
-    print(previous_frame[0], previous_frame[1], previous_frame[2], previous_frame[3])
-    print("Current frame")
-    print(curret_frame[0],curret_frame[1],curret_frame[2], curret_frame[3])
+    #print("Previous frame")
+    #print(previous_frame[0], previous_frame[1], previous_frame[2], previous_frame[3])
+   # print("Current frame")
+   # print(curret_frame[0],curret_frame[1],curret_frame[2], curret_frame[3])
 
     df = points_las_shift.to_numpy()
 
@@ -64,7 +67,7 @@ def shift_coords(fotogramma_n):
     #Punti ruotati = rotazione.apply(Coordinate relative)
     rotated_df = rotation.apply(df)
 
-    return rotated_df
+    return rotated_df,points_las
 
 
 def find_las(fotogramma):
@@ -77,35 +80,107 @@ def find_las(fotogramma):
     print("Las file: " + str(las_file),"Fotogramma: "+str(fotogramma_n))
     return las_file,fotogramma_n
 
+            
+def find_distances(points_las_shift):
+    distances = []
+    
+    x = points_las_shift[:,0]
+    y = points_las_shift[:,1]
+    z = points_las_shift[:,2]
+        
+    distances = np.sqrt(x**2+y**2+z**2)
+
+    #d = ((x2 - x1)2 + (y2 - y1)2 + (z2 - z1)2)1/2
+    #d =  [(x1)2 + (y1)2 + (z1)2]1/2 in my case since we are calculating against the origin
+    return distances
+        
+    
+def find_signal_pos(res,points_las, n): 
+    '''
+    n è il fotogramma corrent 
+    res sono i punti 2d 
+    points_las sono i punti 3d
+    
+    '''
+    global name
+    
+    risoluzione = [2048,2048,2448,2448]
+    for i in signal_list: #invece di iterare su tutti i segnali io dovrei andare a prendre solo quelli nel mio fotogramma corrente
+        Cx = float(i[0])*risoluzione[0]   #centro di ogni i-esimo rilevamento 
+        Cy = float(i[1])*risoluzione[1]
+        W = float(i[2])*risoluzione[0]
+        H = float(i[3])*risoluzione[1]
+        
+        frame_n = i[5]
+        
+        index = []
+        x = res[0]
+        y = res[1]
+        if(frame_n == n):
+            name = i[4]
+            for j in res:
+                if(j[0]>Cx-W/2 and j[0]<Cx+W/2 and j[1]>Cy-H/2 and j[1]<Cy+H/2):
+                    index.append(True)
+                else:
+                    index.append(False)
+                
+            point_masked = points_las[index]
+            position_gps = point_masked.mean(axis = 0) #1823623.732204751
+   
+
+    return position_gps,name,n
+
+
+def iterate_frames():
+    to_write = []
+    with open('example.csv', 'w') as file:
+          writer = csv.writer(file)
+          
+          for i in signal_list:
+                frame_n = i[5]
+                
+                if(frame_n < 1000): #non ho i LAS file al momento
+                
+                    las_file, fotogramma_n = find_las(frame_n) #minimum 2 , inserisci il numero del tuo fotogramma
+                    #516 no
+                    #200 si - W H 65px, Cx,Cy 1271 1207
+                    #601 si
+                
+                    IMG_FILE = "./Cam1/202107280658_Rectified_" + str(fotogramma_n) + "_Cam1.jpg"
+                    tal = PointProjection()
+                    points_las_shift,points_las = shift_coords(fotogramma_n,las_file)
+                    
+                    fig = plt.figure()
+                    ax = fig.add_subplot(111, projection='3d')
+                    ax.scatter(points_las_shift[:, 0], points_las_shift[:, 1], points_las_shift[:, 2], marker='o')
+                    
+                    distances = find_distances(points_las_shift)
+                    
+                    points = np.asarray(points_las_shift)
+                    res = tal.project_pointcloud_to_image(np.array(points))
+                    cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
+                    
+                    position_gps,name,n = find_signal_pos(res,points_las,fotogramma_n)
+                    print(name)
+                    tmp = str(position_gps) +"",str(name) +"",str(n)
+                    
+                    writer.writerow(tmp)
+                else:
+                    break
+        
+
 if __name__ == "__main__":
-    n_fotogrammi = 1
-
-    #for i in range(n_fotogrammi):
-     #   las_file,fotogramma_n = find_las(i+1)
-
-    las_file, fotogramma_n = find_las(500) #minimum 2 , inserisci il numero del tuo fotogramma
-
-    IMG_FILE = "./Cam1/202107280658_Rectified_" + str(fotogramma_n) + "_Cam1.jpg"
-
-    tal = PointProjection()
-    points_las_shift = shift_coords(fotogramma_n)
     
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-    ax.scatter(points_las_shift[:, 0], points_las_shift[:, 1], points_las_shift[:, 2], marker='o')
-    points = np.asarray(points_las_shift)
-    res = tal.project_pointcloud_to_image(np.array(points))
-
-    cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
-
-    frame = cv2.imread(IMG_FILE)
+    iterate_frames()
     
-    for i in range(0, len(res), 1):
-        #if points[i][0] > 0 and points[i][1] < 0: #fatto con marzia per eliminare i punti nel cielo
-        cv2.circle(frame, (int(res[i][0]), int(res[i][1])), 1, (0, 0, 255), -1)
+   
+    
+    '''for i in range(0, len(res), 1):
+        if  points[i][1] < 0: #fatto con marzia per eliminare i punti nel cielo
+            cv2.circle(frame, (int(res[i][0]), int(res[i][1])), 1, (0, 0, 255), -1)
             #print ("original 3D points: "+str(points[i])+" projected 2D points: ["+str(int(res[i][0]))+" , "+str(int(res[i][1]))+"]" )
+'''
+    #cv2.imshow("frame", frame)
+    #cv2.waitKey(0)
 
-    cv2.imshow("frame", frame)
-    cv2.waitKey(0)
-
-    print(list(points))
+    #print(list(points))
