@@ -81,19 +81,6 @@ def find_las(fotogramma):
     return las_file,fotogramma_n
 
             
-def find_distances(points_las_shift):
-    distances = []
-    
-    x = points_las_shift[:,0]
-    y = points_las_shift[:,1]
-    z = points_las_shift[:,2]
-        
-    distances = np.sqrt(x**2+y**2+z**2)
-
-    #d = ((x2 - x1)2 + (y2 - y1)2 + (z2 - z1)2)1/2
-    #d =  [(x1)2 + (y1)2 + (z1)2]1/2 in my case since we are calculating against the origin
-    return distances
-        
     
 def find_signal_pos(res,points_las, n): 
     '''
@@ -103,6 +90,8 @@ def find_signal_pos(res,points_las, n):
     
     '''
     global name
+    
+    position_gps = pd.DataFrame()
     
     risoluzione = [2048,2048,2448,2448]
     for i in signal_list: #invece di iterare su tutti i segnali io dovrei andare a prendre solo quelli nel mio fotogramma corrente
@@ -127,14 +116,16 @@ def find_signal_pos(res,points_las, n):
             point_masked = points_las[index]
             position_gps = point_masked.mean(axis = 0) #1823623.732204751
    
-
     return position_gps,name,n
-
 
 def iterate_frames():
     to_write = []
     with open('example.csv', 'w') as file:
           writer = csv.writer(file)
+          tmp = str("X") +"",str("Y") +"",str("Z") +"",str("Name")+"",str("Confidence") +"",str("N frame")
+          writer.writerow(tmp)
+                 
+          #writer.writerow(tmp)
           
           for i in signal_list:
                 frame_n = i[5]
@@ -154,33 +145,49 @@ def iterate_frames():
                     ax = fig.add_subplot(111, projection='3d')
                     ax.scatter(points_las_shift[:, 0], points_las_shift[:, 1], points_las_shift[:, 2], marker='o')
                     
-                    distances = find_distances(points_las_shift)
                     
                     points = np.asarray(points_las_shift)
                     res = tal.project_pointcloud_to_image(np.array(points))
                     cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
                     
                     position_gps,name,n = find_signal_pos(res,points_las,fotogramma_n)
-                    print(name)
-                    tmp = str(position_gps) +"",str(name) +"",str(n)
+                    position_gps = str(position_gps).replace("[","")
+                    position_gps = str(position_gps).replace("]","")
+                    position_gps = str(position_gps).replace(" ",",")
+                    position_gps = str(position_gps).replace('"',",")
+                    position_gps = str(position_gps).replace("'",",")
                     
+                    x = position_gps.split(",")[0]
+                    y = position_gps.split(",")[1]
+                    z = position_gps.split(",")[2]
+
+                    confidence = name[-4:]
+                    name = name[:-4]
+
+                    tmp = str(x) +"",str(y) +"",str(z) +"",str(name)+"",str(confidence) +"",str(n)
+                    print(tmp)
+                 
                     writer.writerow(tmp)
                 else:
                     break
+                
+    return points, res,IMG_FILE
         
 
 if __name__ == "__main__":
     
-    iterate_frames()
-    
+   points,res,IMG_FILE=  iterate_frames()
    
-    
-    '''for i in range(0, len(res), 1):
-        if  points[i][1] < 0: #fatto con marzia per eliminare i punti nel cielo
-            cv2.circle(frame, (int(res[i][0]), int(res[i][1])), 1, (0, 0, 255), -1)
-            #print ("original 3D points: "+str(points[i])+" projected 2D points: ["+str(int(res[i][0]))+" , "+str(int(res[i][1]))+"]" )
-'''
-    #cv2.imshow("frame", frame)
-    #cv2.waitKey(0)
+   
+'''   cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
 
-    #print(list(points))
+   frame = cv2.imread(IMG_FILE)
+    
+   for i in range(0, len(res), 1):
+       if points[i][1] < 0: #fatto con marzia per eliminare i punti nel cielo
+           cv2.circle(frame, (int(res[i][0]), int(res[i][1])), 1, (0, 0, 255), -1)
+            #print ("original 3D points: "+str(points[i])+" projected 2D points: ["+str(int(res[i][0]))+" , "+str(int(res[i][1]))+"]" )
+
+   cv2.imshow("frame", frame)
+   cv2.waitKey(0)'''
+
