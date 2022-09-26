@@ -24,11 +24,13 @@ def angle(v1, v2, acute):
     else:
         return 2 * np.pi - angle
 
-def shift_coords(fotogramma_n,las_file):
+def shift_coords(fotogramma_n,las_file,t):
 
     points_las_shift = pd.DataFrame(columns=['X','Y','Z'])
-    las_reader.set_n(las_file)
-    points_las = las_reader.return_points()
+    #----------------------------------------------
+    las_reader.set_n(las_file,t)  #Bad code
+    points_las = las_reader.return_points() #Bad code
+    #----------------------------------------------
     points_las_df = pd.DataFrame(points_las, columns = ['X','Y','Z'])
     
     camera = "/Users/danieleligato/Desktop/Thesis/Data/Processed/Ladybug0_1.ori.txt"
@@ -130,46 +132,53 @@ def iterate_frames():
           for i in signal_list:
                 frame_n = i[5]
                 
-                if(frame_n < 1000): #non ho i LAS file al momento
-                
-                    las_file, fotogramma_n = find_las(frame_n) #minimum 2 , inserisci il numero del tuo fotogramma
+                if(frame_n<1000):
+                    t = 0
+                if(frame_n>1000 and frame_n <2000):
+                    t = 1
+                if(frame_n>2000 and frame_n <3000):
+                    t = 2
+                if(frame_n > 3000):
+                    t = 3
+    
+            
+                las_file, fotogramma_n = find_las(frame_n) #minimum 2 , inserisci il numero del tuo fotogramma
                     #516 no
                     #200 si - W H 65px, Cx,Cy 1271 1207
                     #601 si
                 
-                    IMG_FILE = "./Cam1/202107280658_Rectified_" + str(fotogramma_n) + "_Cam1.jpg"
-                    tal = PointProjection()
-                    points_las_shift,points_las = shift_coords(fotogramma_n,las_file)
+                IMG_FILE = "./Cam1/202107280658_Rectified_" + str(fotogramma_n) + "_Cam1.jpg"
+                tal = PointProjection()
+                points_las_shift,points_las = shift_coords(fotogramma_n,las_file,t)  #Terzo parametro sono i migliaia
                     
-                    fig = plt.figure()
-                    ax = fig.add_subplot(111, projection='3d')
-                    ax.scatter(points_las_shift[:, 0], points_las_shift[:, 1], points_las_shift[:, 2], marker='o')
-                    
-                    
-                    points = np.asarray(points_las_shift)
-                    res = tal.project_pointcloud_to_image(np.array(points))
-                    cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
-                    
-                    position_gps,name,n = find_signal_pos(res,points_las,fotogramma_n)
-                    position_gps = str(position_gps).replace("[","")
-                    position_gps = str(position_gps).replace("]","")
-                    position_gps = str(position_gps).replace(" ",",")
-                    position_gps = str(position_gps).replace('"',",")
-                    position_gps = str(position_gps).replace("'",",")
-                    
-                    x = position_gps.split(",")[0]
-                    y = position_gps.split(",")[1]
-                    z = position_gps.split(",")[2]
+                fig = plt.figure()
+                ax = fig.add_subplot(111, projection='3d')
+                ax.scatter(points_las_shift[:, 0], points_las_shift[:, 1], points_las_shift[:, 2], marker='o')
+                
+                
+                points = np.asarray(points_las_shift)
+                res = tal.project_pointcloud_to_image(np.array(points))
+                cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
+                
+                position_gps,name,n = find_signal_pos(res,points_las,fotogramma_n)
+                position_gps = str(position_gps).replace("[","")
+                position_gps = str(position_gps).replace("]","")
+                position_gps = str(position_gps).replace(" ",",")
+                position_gps = str(position_gps).replace('"',",")
+                position_gps = str(position_gps).replace("'",",")
+                
+                x = position_gps.split(",")[0]
+                y = position_gps.split(",")[1]
+                z = position_gps.split(",")[2]
 
-                    confidence = name[-4:]
-                    name = name[:-4]
+                confidence = name[-4:]
+                name = name[:-4]
 
-                    tmp = str(x) +"",str(y) +"",str(z) +"",str(name)+"",str(confidence) +"",str(n)
-                    print(tmp)
-                 
-                    writer.writerow(tmp)
-                else:
-                    break
+                tmp = str(x) +"",str(y) +"",str(z) +"",str(name)+"",str(confidence) +"",str(n)
+                print(tmp)
+             
+                writer.writerow(tmp)
+
                 
     return points, res,IMG_FILE
         

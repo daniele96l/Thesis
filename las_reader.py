@@ -17,21 +17,31 @@ import math
 start_time = time.time()
 points_arr = []
 colors_arr = []
-n = 0
 
-def set_n(n_from_pc):
+def set_n(n_from_pc,thousants):
     global n
+    global t
     n = n_from_pc
+    if(n > 49):
+        n -= 40
+    if(n > 39):
+        n -= 30
+    if(n > 29):
+        n -= 20
+    if(n > 19):
+        n -= 10
+    t = thousants
 
 def return_points():
-    #print(n)
+  
     df = pd.DataFrame(columns=['NF','X','Y','Z','Heading','Roll','Pitch','Time'])
+
     if(n < 9):
-        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_0+"+str(n)+"00_0+"+str(n+1)+"00.las"
+        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t)+"+"+str(n)+"00_"+str(t)+"+"+str(n+1)+"00.las"
     if(n==9):
-        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_0+" + str(n) + "00_1+" + str(0) + "00.las"
+        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t)+"+" + str(n) + "00_"+str(t+1)+"+"+ str(0) + "00.las"
     if(n>9):
-        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_1+" + str(n-10) + "00_1+" + str(n+1-10) + "00.las"
+        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t+1)+"+" + str(n-10) + "00_"+str(t+1)+"+"+str(n+1-10) + "00.las"
     #print("File LAS usato" + file)
     camera = "/Users/danieleligato/Desktop/Thesis/Data/Processed/Ladybug0_1.ori.txt"
     camera_data = pd.read_csv(camera, header=None, delimiter=r"\s+")
