@@ -79,14 +79,6 @@ def find_las(fotogramma):
         las_file = 0
     else:
         las_file = int((fotogramma_n)/50)
-        
-    last_digits = int(str(fotogramma_n)[-2:])
-    if(last_digits > 90): #se siamo vicini alla fine di un point cloud è meglio prendere il prossimo 
-        las_file += 1
-    if(last_digits > 45 and last_digits<50):
-        las_file += 1
-        
-  
     print("Las file: " + str(las_file),"Fotogramma: "+str(fotogramma_n))
     return las_file,fotogramma_n
 
@@ -132,65 +124,64 @@ def find_signal_pos(res,points_las, n):
             []
             [nan nan nan]"""
    
-    return position_gps,name,n
+    return position_gps,n
 
 def iterate_frames():
     to_write = []
-    with open('dati_mappa.csv', 'w') as file:
-          writer = csv.writer(file)
-          tmp = str("X") +"",str("Y") +"",str("Z") +"",str("Name")+"",str("Confidence") +"",str("N frame")
-          writer.writerow(tmp)
-                 
-          #writer.writerow(tmp)
-          
-          for i in signal_list:
-                frame_n = i[5]
 
-                if (frame_n < 999):
-                    t = 0
-                if (frame_n >= 1000 and frame_n < 1499):
-                    t = 1
-                if (frame_n >= 1500 and frame_n < 2000):
-                    t = 2
+    ''' Las file: 30
+    Fotogramma: 1510
+    n = 10
+    t = 2 !!! ATTENZUIBE
+    Un_F_3+000_3+100.las'''
+
+    ''' Las file: 28
+    Fotogramma: 1400
+    n = 18
+    t = 1
+    Un_F_2+800_2+900.las'''
+
+
+    frame_n = 590
+    #651 da problemi
+    t = 0
+
+    if (frame_n < 999):
+        t = 0
+    if (frame_n >= 1000 and frame_n < 1499):
+        t = 1
+    if (frame_n >= 1500 and frame_n < 2000):
+        t = 2
+
+
+    las_file, fotogramma_n = find_las(frame_n) #minimum 2 , inserisci il numero del tuo fotogramma
+        #516 no
+        #200 si - W H 65px, Cx,Cy 1271 1207
+        #601 si
     
-            
-                las_file, fotogramma_n = find_las(frame_n) #minimum 2 , inserisci il numero del tuo fotogramma
-                    #516 no
-                    #200 si - W H 65px, Cx,Cy 1271 1207
-                    #601 si
-                
-                IMG_FILE = "./Cam1/202107280658_Rectified_" + str(fotogramma_n) + "_Cam1.jpg"
-                tal = PointProjection()
-                points_las_shift,points_las = shift_coords(fotogramma_n,las_file,t)  #Terzo parametro sono i migliaia
-                    
-                fig = plt.figure()
-                ax = fig.add_subplot(111, projection='3d')
-                ax.scatter(points_las_shift[:, 0], points_las_shift[:, 1], points_las_shift[:, 2], marker='o')
-                
-                
-                points = np.asarray(points_las_shift)
-                res = tal.project_pointcloud_to_image(np.array(points))
-                cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
-                
-                position_gps,name,n = find_signal_pos(res,points_las,fotogramma_n)
-                position_gps = str(position_gps).replace("[","")
-                position_gps = str(position_gps).replace("]","")
-                position_gps = str(position_gps).replace(" ",",")
-                position_gps = str(position_gps).replace('"',",")
-                position_gps = str(position_gps).replace("'",",")
-                
-                x = position_gps.split(",")[0]
-                y = position_gps.split(",")[1]
-                z = position_gps.split(",")[2]
-
-
-                confidence = name[-4:]
-                name = name[:-4]
-
-                tmp = str(x) +"",str(y) +"",str(z) +"",str(name)+"",str(confidence) +"",str(n)
-                print(tmp)
-             
-                writer.writerow(tmp)
+    IMG_FILE = "./Cam1/202107280658_Rectified_" + str(fotogramma_n) + "_Cam1.jpg"
+    tal = PointProjection()
+    points_las_shift,points_las = shift_coords(fotogramma_n,las_file,t)  #Terzo parametro sono i migliaia
+        
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+    ax.scatter(points_las_shift[:, 0], points_las_shift[:, 1], points_las_shift[:, 2], marker='o')
+    
+    
+    points = np.asarray(points_las_shift)
+    res = tal.project_pointcloud_to_image(np.array(points))
+    cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
+    
+    position_gps,n = find_signal_pos(res,points_las,fotogramma_n)
+    position_gps = str(position_gps).replace("[","")
+    position_gps = str(position_gps).replace("]","")
+    position_gps = str(position_gps).replace(" ",",")
+    position_gps = str(position_gps).replace('"',",")
+    position_gps = str(position_gps).replace("'",",")
+    
+    x = position_gps.split(",")[0]
+    y = position_gps.split(",")[1]
+    z = position_gps.split(",")[2]
 
                 
     return points, res,IMG_FILE
@@ -201,7 +192,7 @@ if __name__ == "__main__":
    points,res,IMG_FILE=  iterate_frames()
    
    
-'''   cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
+   cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
 
    frame = cv2.imread(IMG_FILE)
     
@@ -211,5 +202,5 @@ if __name__ == "__main__":
             #print ("original 3D points: "+str(points[i])+" projected 2D points: ["+str(int(res[i][0]))+" , "+str(int(res[i][1]))+"]" )
 
    cv2.imshow("frame", frame)
-   cv2.waitKey(0)'''
+   cv2.waitKey(0)
 

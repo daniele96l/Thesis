@@ -5,7 +5,7 @@ import utm
 
 
 
-df = pd.read_csv('/Users/danieleligato/Desktop/Thesis/point_projection/example.csv')
+df = pd.read_csv('/dati_mappa.csv')
 df_converted = df
 
 #3.62952577e+05,5.10747292e+06,1.86774772e+02,information--pedestrians-crossing--g1,0.38,621

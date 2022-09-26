@@ -36,6 +36,35 @@ def return_points():
   
     df = pd.DataFrame(columns=['NF','X','Y','Z','Heading','Roll','Pitch','Time'])
 
+    print("n=" + str(n))
+    print("t=" + str(t))
+
+    if(n < 9):
+        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t)+"+"+str(n)+"00_"+str(t)+"+"+str(n+1)+"00.las"
+    if(n==9):
+        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t)+"+" + str(n) + "00_"+str(t+1)+"+"+ str(0) + "00.las"
+    if(n>9):
+        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t+1)+"+" + str(n-10) + "00_"+str(t+1)+"+"+str(n+1-10) + "00.las"
+    #print("File LAS usato" + file)
+
+    print(file)
+    camera = "/Users/danieleligato/Desktop/Thesis/Data/Processed/Ladybug0_1.ori.txt"
+    camera_data = pd.read_csv(camera, header=None, delimiter=r"\s+")
+    point_cloud_i = lp.read(file)
+    points_i = np.vstack((point_cloud_i.x, point_cloud_i.y, point_cloud_i.z)).transpose()
+    colors_i = np.vstack((point_cloud_i.red, point_cloud_i.green, point_cloud_i.blue)).transpose()
+    campionamento = 50
+    #print("Campionamento usato " + str(campionamento))
+    points_i = points_i[0::campionamento]
+    colors_i = colors_i[0::campionamento]/65535.
+    return points_i
+
+
+def return_points_next():
+    
+  
+    df = pd.DataFrame(columns=['NF','X','Y','Z','Heading','Roll','Pitch','Time'])
+
     if(n < 9):
         file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t)+"+"+str(n)+"00_"+str(t)+"+"+str(n+1)+"00.las"
     if(n==9):
