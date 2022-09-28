@@ -45,6 +45,8 @@ def return_points():
         file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t)+"+" + str(n) + "00_"+str(t+1)+"+"+ str(0) + "00.las"
     if(n>9):
         file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t+1)+"+" + str(n-10) + "00_"+str(t+1)+"+"+str(n+1-10) + "00.las"
+    if(n==19):
+        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(1)+"+" + str(n-10) + "00_"+str(2)+"+"+str(0) + "00.las"
     #print("File LAS usato" + file)
 
     print(file)

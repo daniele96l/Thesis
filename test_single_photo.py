@@ -116,7 +116,9 @@ def find_signal_pos(res,points_las, n):
                     index.append(False)
                 
             point_masked = points_las[index]
-            print(point_masked)
+            #print(point_masked)
+            no_outlier = remove_outlier(point_masked,"0")
+            #print(type(no_outlier))
             position_gps = point_masked.mean(axis = 0) #1823623.732204751
             print(position_gps)
             
@@ -125,6 +127,16 @@ def find_signal_pos(res,points_las, n):
             [nan nan nan]"""
    
     return position_gps,n
+
+def remove_outlier(df_in, col_name):
+    df_in = pd.DataFrame(df_in, columns = ['0','1','2'])
+    q1 = df_in[col_name].quantile(0.25)
+    q3 = df_in[col_name].quantile(0.75)
+    iqr = q3-q1 #Interquartile range
+    fence_low  = q1-1.5*iqr
+    fence_high = q3+1.5*iqr
+    df_out = df_in.loc[(df_in[col_name] > fence_low) & (df_in[col_name] < fence_high)]
+    return df_out
 
 def iterate_frames():
     to_write = []
@@ -201,6 +213,6 @@ if __name__ == "__main__":
            cv2.circle(frame, (int(res[i][0]), int(res[i][1])), 1, (0, 0, 255), -1)
             #print ("original 3D points: "+str(points[i])+" projected 2D points: ["+str(int(res[i][0]))+" , "+str(int(res[i][1]))+"]" )
 
-   cv2.imshow("frame", frame)
-   cv2.waitKey(0)
+   #cv2.imshow("frame", frame)
+   #cv2.waitKey(0)
 

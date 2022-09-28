@@ -81,12 +81,13 @@ def find_las(fotogramma):
         las_file = int((fotogramma_n)/50)
         
     last_digits = int(str(fotogramma_n)[-2:])
-    if(last_digits > 90): #se siamo vicini alla fine di un point cloud è meglio prendere il prossimo 
+    if(last_digits > 95): #se siamo vicini alla fine di un point cloud è meglio prendere il prossimo
         las_file += 1
     if(last_digits > 45 and last_digits<50):
         las_file += 1
-        
-  
+
+        #684 non va
+
     print("Las file: " + str(las_file),"Fotogramma: "+str(fotogramma_n))
     return las_file,fotogramma_n
 
@@ -124,15 +125,25 @@ def find_signal_pos(res,points_las, n):
                     index.append(False)
                 
             point_masked = points_las[index]
-            print(point_masked)
-            position_gps = point_masked.mean(axis = 0) #1823623.732204751
+            #print(point_masked)
+            no_outlier = remove_outlier(point_masked,"0")
+            #print(type(no_outlier))
+            position_gps = no_outlier.mean(axis = 0) #1823623.732204751
             print(position_gps)
-            
-            """Las file: 11 Fotogramma: 599 - Questo accade quando la point cloud è finita
-            []
-            [nan nan nan]"""
    
     return position_gps,name,n
+
+
+def remove_outlier(df_in, col_name):
+    df_in = pd.DataFrame(df_in, columns = ['0','1','2'])
+    q1 = df_in[col_name].quantile(0.25)
+    q3 = df_in[col_name].quantile(0.75)
+    iqr = q3-q1 #Interquartile range
+    fence_low  = q1-1.5*iqr
+    fence_high = q3+1.5*iqr
+    df_out = df_in.loc[(df_in[col_name] > fence_low) & (df_in[col_name] < fence_high)]
+    df_out = df_out.to_numpy()
+    return df_out
 
 def iterate_frames():
     to_write = []
@@ -152,12 +163,8 @@ def iterate_frames():
                     t = 1
                 if (frame_n >= 1500 and frame_n < 2000):
                     t = 2
-    
-            
+
                 las_file, fotogramma_n = find_las(frame_n) #minimum 2 , inserisci il numero del tuo fotogramma
-                    #516 no
-                    #200 si - W H 65px, Cx,Cy 1271 1207
-                    #601 si
                 
                 IMG_FILE = "./Cam1/202107280658_Rectified_" + str(fotogramma_n) + "_Cam1.jpg"
                 tal = PointProjection()
@@ -183,16 +190,13 @@ def iterate_frames():
                 y = position_gps.split(",")[1]
                 z = position_gps.split(",")[2]
 
-
                 confidence = name[-4:]
                 name = name[:-4]
 
                 tmp = str(x) +"",str(y) +"",str(z) +"",str(name)+"",str(confidence) +"",str(n)
                 print(tmp)
-             
                 writer.writerow(tmp)
 
-                
     return points, res,IMG_FILE
         
 
