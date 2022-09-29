@@ -14,6 +14,8 @@ from math import atan2, degrees, radians
 from scipy.spatial.transform import Rotation as R
 from rilevamenti import sorted_list as signal_list
 import csv
+from scipy.stats import zscore
+import scipy.stats as stats
 
 def angle(v1, v2, acute):
 # v1 is your firsr vector
@@ -46,19 +48,12 @@ def shift_coords(fotogramma_n,las_file,t):
     mydegrees = degrees(myradians)  # ci vuole 0 per il frame 50 (170 in termini assoluti)
     #("La mia rotazione rispetto il punto iniziale " + str(mydegrees))
 
-
     #Coordinate relative = coordinate assolute nuvola - coordinate assolute macchina
     points_las_shift['X'] = (points_las_df['X'][:] - float(curret_frame[1])) #lato
     points_las_shift['Y'] = (points_las_df['Y'][:] - float(curret_frame[2])) #profondità
     points_las_shift['Z'] = (points_las_df['Z'][:] - float(curret_frame[3])) #altezza
 
-    #print("Previous frame")
-    #print(previous_frame[0], previous_frame[1], previous_frame[2], previous_frame[3])
-   # print("Current frame")
-   # print(curret_frame[0],curret_frame[1],curret_frame[2], curret_frame[3])
-
     df = points_las_shift.to_numpy()
-
 
     rotation_degrees = float(mydegrees) #MAYBEMAYBE
     rotation_radians = np.radians(rotation_degrees)
@@ -70,7 +65,6 @@ def shift_coords(fotogramma_n,las_file,t):
     rotated_df = rotation.apply(df)
 
     return rotated_df,points_las
-
 
 def find_las(fotogramma):
     fotogramma_n = fotogramma
@@ -91,16 +85,16 @@ def find_las(fotogramma):
     print("Las file: " + str(las_file),"Fotogramma: "+str(fotogramma_n))
     return las_file,fotogramma_n
 
-            
-    
 def find_signal_pos(res,points_las, n): 
     '''
     n è il fotogramma corrent 
     res sono i punti 2d  nel fotogramma - essa è la trasformazione 2d di points_las , quindi c'è una corrispondenza riga a riga tra i due array
     points_las sono i punti 3d
     
+    Quindi, itero su tutti i 
     '''
     global name
+    name = ''
     
     position_gps = pd.DataFrame()
     
@@ -110,14 +104,13 @@ def find_signal_pos(res,points_las, n):
         Cy = float(i[1])*risoluzione[1]
         W = float(i[2])*risoluzione[0]
         H = float(i[3])*risoluzione[1]
-        
-        frame_n = i[5]
-        
+
+        frame_n = i[5] 
+        #ci sono due cartelli nel foto gramma 1654
         index = []
         x = res[0]
         y = res[1]
         if(frame_n == n): #itero per ogni frame 
-            name = i[4]
             for j in res:
                 if(j[0]>Cx-W/2 and j[0]<Cx+W/2 and j[1]>Cy-H/2 and j[1]<Cy+H/2): #vadoa vedere quali punti sono dentro al bounding box
                     index.append(True)
@@ -125,25 +118,34 @@ def find_signal_pos(res,points_las, n):
                     index.append(False)
                 
             point_masked = points_las[index]
-            #print(point_masked)
-            no_outlier = remove_outlier(point_masked,"0")
+            print(len(point_masked))
+            no_outlier_x = remove_outlier(point_masked[:,0],0)
+            no_outlier_y = remove_outlier(point_masked[:,1],0)
+            no_outlier_z = remove_outlier(point_masked[:,2],0)
+            
+            no_outlier = pd.concat([no_outlier_x,no_outlier_y,no_outlier_z],axis=1, join ='outer' )
+            print(len(no_outlier))
             #print(type(no_outlier))
-            position_gps = no_outlier.mean(axis = 0) #1823623.732204751
+            if(str(name)!=str(i[4])):
+                name += str(i[4]) + ' '
+                
+            position_gps = np.append(position_gps,no_outlier.mean(axis = 0)) #1823623.732204751
+            
             print(position_gps)
+            print(name)
    
     return position_gps,name,n
 
-
 def remove_outlier(df_in, col_name):
-    df_in = pd.DataFrame(df_in, columns = ['0','1','2'])
-    q1 = df_in[col_name].quantile(0.25)
-    q3 = df_in[col_name].quantile(0.75)
+    df_in = pd.DataFrame(df_in)
+    q1 = df_in[col_name].quantile(0.4)
+    q3 = df_in[col_name].quantile(0.6)
     iqr = q3-q1 #Interquartile range
     fence_low  = q1-1.5*iqr
     fence_high = q3+1.5*iqr
     df_out = df_in.loc[(df_in[col_name] > fence_low) & (df_in[col_name] < fence_high)]
-    df_out = df_out.to_numpy()
     return df_out
+
 
 def iterate_frames():
     to_write = []
@@ -174,12 +176,12 @@ def iterate_frames():
                 ax = fig.add_subplot(111, projection='3d')
                 ax.scatter(points_las_shift[:, 0], points_las_shift[:, 1], points_las_shift[:, 2], marker='o')
                 
-                
                 points = np.asarray(points_las_shift)
                 res = tal.project_pointcloud_to_image(np.array(points))
                 cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
                 
                 position_gps,name,n = find_signal_pos(res,points_las,fotogramma_n)
+                
                 position_gps = str(position_gps).replace("[","")
                 position_gps = str(position_gps).replace("]","")
                 position_gps = str(position_gps).replace(" ",",")
@@ -198,7 +200,6 @@ def iterate_frames():
                 writer.writerow(tmp)
 
     return points, res,IMG_FILE
-        
 
 if __name__ == "__main__":
     

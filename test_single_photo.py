@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np
 import math
 import cv2
+import las_plotter
 import las_reader
 import matplotlib.pyplot as plt
 from point_projection import PointProjection
@@ -107,6 +108,8 @@ def find_signal_pos(res,points_las, n):
         index = []
         x = res[0]
         y = res[1]
+        print("Fotogramma che mi serve")
+        print(n)
         if(frame_n == n): #itero per ogni frame 
             name = i[4]
             for j in res:
@@ -120,6 +123,7 @@ def find_signal_pos(res,points_las, n):
             no_outlier = remove_outlier(point_masked,"0")
             #print(type(no_outlier))
             position_gps = point_masked.mean(axis = 0) #1823623.732204751
+            print("position_gps del segnale")
             print(position_gps)
             
             """Las file: 11 Fotogramma: 599 - Questo accade quando la point cloud è finita
@@ -153,8 +157,15 @@ def iterate_frames():
     t = 1
     Un_F_2+800_2+900.las'''
 
+    '''3.62849228e+05,5.10774968e+06,1.88653069e+02,information--safety-area--g2,0.34,245
+    3.62843139e+05,5.10762606e+06,1.80536505e+02,regulatory--stop--g1,0.26,515
+    3.62845508e+05,5.10762618e+06,1.80530659e+02,regulatory--no-entry--g1,0.36,516
+    3.62848071e+05,5.10762678e+06,1.80513392e+02,regulatory--no-entry--g1,0.37,517
+    3.62851140e+05,5.10762839e+06,1.80481214e+02,regulatory--no-entry--g1,0.42,518
+    3.62856676e+05,5.10762490e+06,1.80540606e+02,regulatory--no-entry--g1,0.25,522
+    3.62859423e+05,5.10762713e+06,1.80511056e+02,regulatory--no-entry--g1,0.57,523'''
+    frame_n = fotogramma_scelto
 
-    frame_n = 590
     #651 da problemi
     t = 0
 
@@ -181,38 +192,46 @@ def iterate_frames():
     
     
     points = np.asarray(points_las_shift)
+    print("Posizione dei punti nella pointcloud")
+    print(points)
     res = tal.project_pointcloud_to_image(np.array(points))
     cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
+    fotogramma_n = fotogramma_scelto
     
     position_gps,n = find_signal_pos(res,points_las,fotogramma_n)
-    position_gps = str(position_gps).replace("[","")
-    position_gps = str(position_gps).replace("]","")
-    position_gps = str(position_gps).replace(" ",",")
-    position_gps = str(position_gps).replace('"',",")
-    position_gps = str(position_gps).replace("'",",")
-    
-    x = position_gps.split(",")[0]
-    y = position_gps.split(",")[1]
-    z = position_gps.split(",")[2]
+    print("GPS")
+    print(position_gps)
 
-                
-    return points, res,IMG_FILE
+
+    return points, res,IMG_FILE,position_gps
         
 
-if __name__ == "__main__":
-    
-   points,res,IMG_FILE=  iterate_frames()
-   
-   
-   cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
+def coords_to_px(position_gps):
 
+    tal = PointProjection()
+    points = np.asarray(position_gps)
+    res = tal.project_pointcloud_to_image(np.array(points))
+
+    return res
+
+if __name__ == "__main__":
+   global fotogramma_scelto
+   fotogramma_scelto = 965
+   points,res,IMG_FILE,position_gps =  iterate_frames()
+
+   cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
    frame = cv2.imread(IMG_FILE)
+
+   las_file, fotogramma_n = find_las(fotogramma_scelto)  # minimum 2 , inserisci il numero del tuo fotogramma
+   las_plotter.set_n(las_file,0)
+
+   points_las = las_plotter.plotta_mappa(position_gps)  # Bad code   , Array of float with 3 columns
     
    for i in range(0, len(res), 1):
        if points[i][1] < 0: #fatto con marzia per eliminare i punti nel cielo
-           cv2.circle(frame, (int(res[i][0]), int(res[i][1])), 1, (0, 0, 255), -1)
+         cv2.circle(frame, (int(res[i][0]), int(res[i][1])), 1, (0, 0, 255), -1)
             #print ("original 3D points: "+str(points[i])+" projected 2D points: ["+str(int(res[i][0]))+" , "+str(int(res[i][1]))+"]" )
 
-   #cv2.imshow("frame", frame)
-   #cv2.waitKey(0)
+   cv2.imshow("frame", frame)
+   cv2.waitKey(0)
 
