@@ -32,9 +32,15 @@ def set_n(n_from_pc,thousants):
         n -= 10
     t = thousants
 
-def plotta_mappa(position_gps):
+def plotta_mappa(position_gps,point_masked,no_outlier,no_outlier_c):
+    df_no_outlier = no_outlier
     segnale = np.matrix(position_gps).T
     segnale = segnale.T
+    no_outlier = np.matrix(no_outlier)
+
+    #print(type(segnale))
+    #print(type(point_masked))
+    #print(type(no_outlier))
 
     df = pd.DataFrame(columns=['NF','X','Y','Z','Heading','Roll','Pitch','Time'])
 
@@ -49,6 +55,7 @@ def plotta_mappa(position_gps):
         file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t+1)+"+" + str(n-10) + "00_"+str(t+1)+"+"+str(n+1-10) + "00.las"
     if(n==19):
         file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(1)+"+" + str(n-10) + "00_"+str(2)+"+"+str(0) + "00.las"
+
     print("File LAS usato" + file)
 
     print(file)
@@ -57,17 +64,51 @@ def plotta_mappa(position_gps):
     point_cloud_i = lp.read(file)
     points_i = np.vstack((point_cloud_i.x, point_cloud_i.y, point_cloud_i.z)).transpose()
     colors_i = np.vstack((point_cloud_i.red, point_cloud_i.green, point_cloud_i.blue)).transpose()
-    campionamento = 1000
+    
+    campionamento = 3000
     #print("Campionamento usato " + str(campionamento))
     points_i = points_i[0::campionamento]
     colors_i = colors_i[0::campionamento]/65535.
+
+    a = pd.DataFrame(points_i)
+    b = pd.DataFrame(no_outlier)
+
+    df_final = pd.merge(a,b, how='inner')
+
+    df_no_outlier_c = pd.DataFrame(no_outlier_c)
     
-    tutti = np.vstack([points_i, segnale])
-    tutti_c = np.vstack([colors_i, [0,1,0]])
+    final_color_restricted = df_no_outlier_c.iloc[df_no_outlier.index]
+    
+    test = []
+    
+    '''   for i in point_masked:
+        if(i[0]<362885):
+            test.append(True)
+        else:
+            test.append(False)
+    
+    point_masked = point_masked[test]
+
+    df_no_outlier_c = df_no_outlier_c[test]'''
+    
+
+    #tutti_c = final_color_restricted
+
+    #tutti = np.vstack([points_i, segnale])
+    #tutti_c = np.vstack([colors_i, [0, 1, 0]])
 
     
     d = 0
     j = 0
+
+    special_p = [362876.781, 5107617.500,183.434]
+    special_p_c = [0,1,0]
+
+    #tutti = np.vstack([no_outlier, special_p])
+    #tutti_c = np.vstack([final_color_restricted, special_p_c])
+
+    tutti = np.vstack([no_outlier])
+    tutti_c = np.vstack([final_color_restricted])
 
     # resticted_points,resticted_points_c = return_points()
 
@@ -75,10 +116,11 @@ def plotta_mappa(position_gps):
     # plotting points
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
+    #ax.scatter(tutti[:, 0], tutti[:, 1], tutti[:, 2], c = tutti_c,  marker='o')
+    #ax.scatter(no_outlier[:, 0], no_outlier[:, 1], no_outlier[:, 2], c=final_color_restricted, marker='o')
     ax.scatter(tutti[:, 0], tutti[:, 1], tutti[:, 2], c=tutti_c, marker='o')
     ax.margins(x=0,y=0,z=0)
-    print("3.5")
-   # plt.show()
+    #plt.show()
     print("4")
 
 

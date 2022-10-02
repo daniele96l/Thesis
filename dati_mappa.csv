@@ -1,136 +1,700 @@
 X,Y,Z,Name,Confidence,N frame
-3.62844110e+05,5.10775666e+06,1.92146412e+02,information--safety-area--g20,.34 ,245
-3.62843186e+05,5.10762606e+06,1.80535418e+02,regulatory--stop--g10,.26 ,515
-3.62845538e+05,5.10762603e+06,1.80536106e+02,regulatory--no-entry--g10,.36 ,516
-3.62848087e+05,5.10762676e+06,1.80515530e+02,regulatory--no-entry--g10,.37 ,517
-3.62851194e+05,5.10762837e+06,1.80481095e+02,regulatory--no-entry--g10,.42 ,518
-3.62856714e+05,5.10762481e+06,1.80541164e+02,regulatory--no-entry--g10,.25 ,522
-3.62859462e+05,5.10762705e+06,1.80512543e+02,regulatory--no-entry--g10,.57 ,523
-3.62866445e+05,5.10762389e+06,1.80522571e+02,regulatory--stop--g10,.29 ,527
-3.62871880e+05,5.10762631e+06,1.80529078e+02,regulatory--stop--g10,.28 ,529
-3.62888861e+05,5.10761777e+06,1.80605346e+02,regulatory--yield--g10,.34 ,538
-3.62890440e+05,5.10761560e+06,1.80570552e+02,regulatory--yield--g10,.34 ,539
-3.62892357e+05,5.10761378e+06,1.80473434e+02,regulatory--yield--g10,.53 ,540
-3.62903048e+05,5.10754235e+06,1.79859954e+02,complementary--chevron-left--g10,.35 ,575
-3.62910238e+05,5.10749622e+06,1.79370422e+02,regulatory--stop--g10,.40 ,599
-3.62911138e+05,5.10749400e+06,1.79310942e+02,regulatory--stop--g10,.40 ,600
-3.62912188e+05,5.10749153e+06,1.79250327e+02,regulatory--stop--g10,.42 ,601
-3.62909425e+05,5.10748524e+06,1.81718268e+02,regulatory--stop--g10,.34 ,602
-3.62932977e+05,5.10747500e+06,1.79172140e+02,information--pedestrians-crossing--g10,.31 ,620
-3.62952577e+05,5.10747292e+06,1.86774772e+02,information--pedestrians-crossing--g10,.38 ,621
-nan,nan,nan,regulatory--yield--g10,.39 ,646
-3.63060152e+05,5.10749868e+06,1.79761315e+02,information--pedestrians-crossing--g10,.44 ,684
-3.63062721e+05,5.10749967e+06,1.79772854e+02,information--pedestrians-crossing--g10,.28 ,685
-3.63068247e+05,5.10749584e+06,1.79797466e+02,regulatory--yield--g10,.27 ,689
-3.63070444e+05,5.10749578e+06,1.79795134e+02,regulatory--yield--g10,.40 ,690
-3.63074057e+05,5.10749910e+06,1.79948130e+02,regulatory--yield--g10.31 regulatory--yield--g10,.45 ,691
-3.63074057e+05,5.10749910e+06,1.79948130e+02,regulatory--yield--g10.31 regulatory--yield--g10,.45 ,691
-3.63076319e+05,5.10749949e+06,1.79992656e+02,regulatory--yield--g10.40 regulatory--yield--g10,.50 ,692
-3.63076319e+05,5.10749949e+06,1.79992656e+02,regulatory--yield--g10.40 regulatory--yield--g10,.50 ,692
-3.63078756e+05,5.10749982e+06,1.80091501e+02,regulatory--yield--g10,.52 ,693
-3.63081352e+05,5.10750025e+06,1.80174817e+02,regulatory--yield--g10,.50 ,694
-3.63083868e+05,5.10750119e+06,1.80065176e+02,regulatory--yield--g10,.63 ,695
-3.63103836e+05,5.10750001e+06,1.80305028e+02,information--pedestrians-crossing--g10,.32 ,704
-3.63255820e+05,5.10759295e+06,1.78410438e+02,information--pedestrians-crossing--g10,.29 ,800
-3.63259296e+05,5.10759615e+06,1.78364728e+02,information--pedestrians-crossing--g10,.50 ,802
-3.63270029e+05,5.10759530e+06,1.82505609e+02,information--pedestrians-crossing--g10,.59 ,803
-3.63416651e+05,5.10766434e+06,1.76975741e+02,information--pedestrians-crossing--g10,.47 ,887
-3.63419221e+05,5.10766686e+06,1.77040429e+02,information--pedestrians-crossing--g10,.63 ,888
-3.63449196e+05,5.10768073e+06,1.77678871e+02,regulatory--keep-right--g10,.36 ,907
-3.63504328e+05,5.10777477e+06,1.77774441e+02,regulatory--no-parking--g10,.30 ,965
-3.63506912e+05,5.10777673e+06,1.77812849e+02,regulatory--no-stopping--g150,.33 ,966
-3.63603364e+05,5.10778548e+06,1.82372739e+02,regulatory--yield--g10,.33 ,1010
-3.63594691e+05,5.10778789e+06,1.77811306e+02,regulatory--yield--g10,.26 ,1011
-3.63605217e+05,5.10778626e+06,1.81534402e+02,regulatory--yield--g10,.29 ,1012
-3.63599063e+05,5.10778938e+06,1.77813926e+02,regulatory--yield--g10,.32 ,1013
-3.63607037e+05,5.10778725e+06,1.80649318e+02,regulatory--yield--g10,.42 ,1014
-3.63608458e+05,5.10778788e+06,1.80379384e+02,regulatory--yield--g10,.38 ,1015
-3.63606348e+05,5.10779445e+06,1.77846821e+02,regulatory--yield--g10,.30 ,1016
-3.63622359e+05,5.10780319e+06,1.78013852e+02,regulatory--no-stopping--g150,.48 ,1030
-3.63608590e+05,5.10793536e+06,1.78208178e+02,information--pedestrians-crossing--g10,.36 ,1097
-3.63625218e+05,5.10795185e+06,1.87746248e+02,information--pedestrians-crossing--g10,.45 ,1098
-3.63600888e+05,5.10798074e+06,1.78456579e+02,regulatory--no-entry--g10,.38 ,1120
-3.63597014e+05,5.10806600e+06,1.81447473e+02,information--pedestrians-crossing--g10,.45 ,1160
-3.63596498e+05,5.10806716e+06,1.81037652e+02,information--pedestrians-crossing--g10,.35 ,1161
-3.63619722e+05,5.10834764e+06,1.91679821e+02,regulatory--yield--g10.36 regulatory--yield--g10,.38 ,1298
-3.63619722e+05,5.10834764e+06,1.91679821e+02,regulatory--yield--g10.36 regulatory--yield--g10,.38 ,1298
-3.63611768e+05,5.10833365e+06,1.82737909e+02,regulatory--yield--g10.35 regulatory--yield--g10,.44 ,1299
-3.63611768e+05,5.10833365e+06,1.82737909e+02,regulatory--yield--g10.35 regulatory--yield--g10,.44 ,1299
-3.63612893e+05,5.10833534e+06,1.82787847e+02,regulatory--yield--g10.39 regulatory--yield--g10,.45 ,1300
-3.63612893e+05,5.10833534e+06,1.82787847e+02,regulatory--yield--g10.39 regulatory--yield--g10,.45 ,1300
-3.63618243e+05,5.10834568e+06,1.88705841e+02,regulatory--yield--g10,.53 ,1301
-3.63614389e+05,5.10834550e+06,1.85428760e+02,regulatory--yield--g10,.40 ,1302
-3.63497604e+05,5.10842221e+06,1.91040989e+02,regulatory--no-entry--g10,.34 ,1386
-3.63506118e+05,5.10841059e+06,1.84302183e+02,regulatory--no-entry--g10,.41 ,1387
-3.63496170e+05,5.10842585e+06,1.91032366e+02,regulatory--no-entry--g10,.40 ,1388
-3.63491425e+05,5.10841305e+06,1.84590205e+02,regulatory--no-entry--g10,.40 ,1394
-3.63452987e+05,5.10842069e+06,1.84669959e+02,information--pedestrians-crossing--g10,.30 ,1414
-3.63179307e+05,5.10845314e+06,1.85693640e+02,information--pedestrians-crossing--g10,.40 ,1552
-3.63062831e+05,5.10849999e+06,1.85992779e+02,regulatory--yield--g10,.27 ,1619
-3.63056146e+05,5.10850896e+06,1.86105662e+02,regulatory--yield--g10,.35 ,1624
-3.63040663e+05,5.10854453e+06,1.86715585e+02,regulatory--keep-right--g10,.25 ,1645
-3.63036828e+05,5.10854748e+06,1.86817042e+02,regulatory--keep-right--g10,.32 ,1648
-3.63035946e+05,5.10854860e+06,1.86855956e+02,information--pedestrians-crossing--g10,.28 ,1649
-3.63023762e+05,5.10854766e+06,1.86941094e+02,information--pedestrians-crossing--g10,.61 ,1651
-3.63021419e+05,5.10854807e+06,1.86980572e+02,information--pedestrians-crossing--g10,.53 ,1652
-3.63018856e+05,5.10854856e+06,1.87033035e+02,information--pedestrians-crossing--g10,.62 ,1653
-3.63018878e+05,5.10855003e+06,1.87061181e+02,regulatory--yield--g10.32 information--pedestrians-crossing--g10,.52 ,1654
-3.63018878e+05,5.10855003e+06,1.87061181e+02,regulatory--yield--g10.32 information--pedestrians-crossing--g10,.52 ,1654
-3.63016818e+05,5.10855056e+06,1.87117011e+02,regulatory--yield--g10,.45 ,1655
-3.63014590e+05,5.10855111e+06,1.87177744e+02,regulatory--yield--g10,.42 ,1656
-3.63012393e+05,5.10855177e+06,1.87356863e+02,regulatory--yield--g10.30 regulatory--yield--g10,.50 ,1657
-3.63012393e+05,5.10855177e+06,1.87356863e+02,regulatory--yield--g10.30 regulatory--yield--g10,.50 ,1657
-3.63009826e+05,5.10855231e+06,1.87317620e+02,regulatory--yield--g10,.50 ,1658
-3.63007071e+05,5.10855303e+06,1.87548171e+02,regulatory--yield--g10,.54 ,1659
-3.63004265e+05,5.10855335e+06,1.87566367e+02,regulatory--yield--g10,.46 ,1660
-3.62949483e+05,5.10854956e+06,1.90835094e+02,information--pedestrians-crossing--g10,.43 ,1691
-3.62952925e+05,5.10854805e+06,1.87469003e+02,information--pedestrians-crossing--g10,.59 ,1693
-nan,nan,nan,information--safety-area--g20,.40 ,1694
-nan,nan,nan,information--pedestrians-crossing--g10,.51 ,1695
-3.62928830e+05,5.10852249e+06,1.86844816e+02,regulatory--keep-right--g10,.30 ,1713
-3.62929244e+05,5.10851444e+06,1.86761361e+02,information--pedestrians-crossing--g10,.46 ,1714
-3.62928360e+05,5.10851217e+06,1.86723611e+02,information--pedestrians-crossing--g10,.49 ,1715
-3.62925124e+05,5.10852247e+06,1.86840230e+02,regulatory--keep-right--g10.29 regulatory--yield--g10.29 information--pedestrians-crossing--g10,.55 ,1716
-3.62925124e+05,5.10852247e+06,1.86840230e+02,regulatory--keep-right--g10.29 regulatory--yield--g10.29 information--pedestrians-crossing--g10,.55 ,1716
-3.62925124e+05,5.10852247e+06,1.86840230e+02,regulatory--keep-right--g10.29 regulatory--yield--g10.29 information--pedestrians-crossing--g10,.55 ,1716
-3.62926782e+05,5.10850700e+06,1.86601273e+02,information--pedestrians-crossing--g10,.68 ,1717
-3.62925600e+05,5.10850502e+06,1.86551013e+02,regulatory--yield--g10,.42 ,1719
-3.62924528e+05,5.10850256e+06,1.86494901e+02,regulatory--yield--g10,.50 ,1720
-3.62920548e+05,5.10850694e+06,1.86540611e+02,regulatory--yield--g10.34 regulatory--roundabout--g10.36 regulatory--yield--g10,.43 ,1721
-3.62920548e+05,5.10850694e+06,1.86540611e+02,regulatory--yield--g10.34 regulatory--roundabout--g10.36 regulatory--yield--g10,.43 ,1721
-3.62920548e+05,5.10850694e+06,1.86540611e+02,regulatory--yield--g10.34 regulatory--roundabout--g10.36 regulatory--yield--g10,.43 ,1721
-3.62918960e+05,5.10850564e+06,1.86521247e+02,regulatory--yield--g10,.39 ,1722
-3.62917696e+05,5.10850553e+06,1.86528603e+02,regulatory--yield--g10.29 regulatory--yield--g10,.32 ,1723
-3.62917696e+05,5.10850553e+06,1.86528603e+02,regulatory--yield--g10.29 regulatory--yield--g10,.32 ,1723
-3.62879585e+05,5.10849214e+06,1.86124883e+02,regulatory--yield--g10,.36 ,1745
-3.62877354e+05,5.10849113e+06,1.86123973e+02,regulatory--yield--g10,.36 ,1746
-3.62875184e+05,5.10848994e+06,1.86113034e+02,regulatory--yield--g10,.29 ,1747
-3.62873169e+05,5.10848862e+06,1.86108087e+02,regulatory--yield--g10,.40 ,1748
-3.62871365e+05,5.10848722e+06,1.86109667e+02,regulatory--yield--g10,.26 ,1749
-3.62869511e+05,5.10848544e+06,1.86106109e+02,regulatory--yield--g10,.42 ,1750
-,362868.0113142,,regulatory--yield--g10,.31 ,1751
-3.62866642e+05,5.10848179e+06,1.86082592e+02,regulatory--yield--g10,.43 ,1752
-3.62865502e+05,5.10847978e+06,1.86068367e+02,regulatory--yield--g10,.50 ,1753
-3.62864698e+05,5.10847758e+06,1.86047500e+02,regulatory--yield--g10,.52 ,1754
-3.62864031e+05,5.10847518e+06,1.86026922e+02,regulatory--yield--g10,.57 ,1755
-3.62865240e+05,5.10847297e+06,1.85963508e+02,regulatory--roundabout--g10.26 regulatory--roundabout--g10.27 regulatory--yield--g10,.47 ,1756
-3.62865240e+05,5.10847297e+06,1.85963508e+02,regulatory--roundabout--g10.26 regulatory--roundabout--g10.27 regulatory--yield--g10,.47 ,1756
-3.62865240e+05,5.10847297e+06,1.85963508e+02,regulatory--roundabout--g10.26 regulatory--roundabout--g10.27 regulatory--yield--g10,.47 ,1756
-3.62864693e+05,5.10846925e+06,1.85974648e+02,regulatory--yield--g10,.54 ,1757
-3.62800621e+05,5.10830996e+06,1.85472614e+02,regulatory--keep-right--g10,.32 ,1848
-3.62799441e+05,5.10830935e+06,1.85457479e+02,regulatory--keep-right--g10,.36 ,1849
-3.62796288e+05,5.10830424e+06,1.85475020e+02,regulatory--yield--g10.32 regulatory--yield--g10,.43 ,1850
-3.62796288e+05,5.10830424e+06,1.85475020e+02,regulatory--yield--g10.32 regulatory--yield--g10,.43 ,1850
-3.62794864e+05,5.10830287e+06,1.85471537e+02,regulatory--yield--g10.34 regulatory--yield--g10,.37 ,1851
-3.62794864e+05,5.10830287e+06,1.85471537e+02,regulatory--yield--g10.34 regulatory--yield--g10,.37 ,1851
-3.62794315e+05,5.10829889e+06,1.85434457e+02,regulatory--yield--g10.33 regulatory--yield--g10,.52 ,1852
-3.62794315e+05,5.10829889e+06,1.85434457e+02,regulatory--yield--g10.33 regulatory--yield--g10,.52 ,1852
-3.62791727e+05,5.10830042e+06,1.85438714e+02,regulatory--yield--g10.33 regulatory--yield--g10,.40 ,1853
-3.62791727e+05,5.10830042e+06,1.85438714e+02,regulatory--yield--g10.33 regulatory--yield--g10,.40 ,1853
-3.62789975e+05,5.10829930e+06,1.85409155e+02,regulatory--yield--g10.37 regulatory--yield--g10,.61 ,1854
-3.62789975e+05,5.10829930e+06,1.85409155e+02,regulatory--yield--g10.37 regulatory--yield--g10,.61 ,1854
-3.62787996e+05,5.10829829e+06,1.85386946e+02,regulatory--yield--g10.40 regulatory--yield--g10,.42 ,1855
-3.62787996e+05,5.10829829e+06,1.85386946e+02,regulatory--yield--g10.40 regulatory--yield--g10,.42 ,1855
-3.62788414e+05,5.10829142e+06,1.85353144e+02,regulatory--roundabout--g10.27 regulatory--yield--g10,.50 ,1856
-3.62788414e+05,5.10829142e+06,1.85353144e+02,regulatory--roundabout--g10.27 regulatory--yield--g10,.50 ,1856
-nan,nan,nan,regulatory--yield--g10,.43 ,1857
+362850.43412424915,5107743.890855,183.68002848185333,information--safety-area--g2,0.31,243
+362853.6634242491,5107743.179521667,183.62107848185335,information--safety-area--g2,0.40,244
+362854.28550758236,5107743.299188334,183.48957848185333,information--safety-area--g2,0.56,245
+nan,nan,nan,regulatory--no-entry--g1,0.26,504
+nan,nan,nan,regulatory--no-entry--g1,0.49,508
+nan,nan,nan,regulatory--no-entry--g1,0.39,509
+nan,nan,nan,regulatory--no-entry--g1,0.42,510
+362852.9325514926,5107613.696944879,182.78409124703967,regulatory--no-entry--g1,0.54,511
+362853.63352945604,5107613.228901186,182.97321358746515,regulatory--no-entry--g1,0.52,512
+362853.9567670337,5107612.887116248,183.01122445703044,regulatory--no-entry--g1,0.58,513
+362853.96573093865,5107613.002760014,183.03347302142743,regulatory--no-entry--g1,0.52,514
+362853.96528016333,5107613.132264869,183.00528041914836,regulatory--no-entry--g1,0.61,515
+362854.2205853169,5107612.880254208,183.0608011943028,regulatory--no-entry--g1,0.66,516
+362853.4506365989,5107614.461561901,182.92096358746517,regulatory--no-entry--g1,0.70,517
+362854.5416232656,5107612.3760019,183.1187769207985,regulatory--no-entry--g1,0.63,518
+362854.5416232656,5107612.3760019,183.1187769207985,regulatory--no-entry--g1,0.63,518
+362866.0995651704,5107613.746561901,182.90210644460802,regulatory--no-entry--g1,0.61,520
+362866.1883322511,5107613.748431466,182.98924619616085,regulatory--no-entry--g1,0.68,521
+362865.556036599,5107614.895561901,183.0911635874652,regulatory--no-entry--g1,0.78,522
+362865.556036599,5107614.895561901,183.0911635874652,regulatory--no-entry--g1,0.78,522
+362865.79981051193,5107614.54230103,183.04348532659563,regulatory--no-entry--g1,0.45,523
+362879.8090705612,5107615.517354353,183.5847749082199,regulatory--stop--g1,0.47,524
+362879.7233449323,5107615.438270234,183.47542192079854,regulatory--stop--g1,0.25,525
+362876.73721993226,5107617.611978567,183.34925525413186,regulatory--stop--g1,0.34,527
+362876.7817032656,5107617.776628568,183.29794136524296,regulatory--stop--g1,0.64,528
+nan,nan,nan,regulatory--yield--g1,0.48,533
+nan,nan,nan,regulatory--yield--g1,0.41,534
+nan,nan,nan,regulatory--yield--g1,0.59,535
+nan,nan,nan,regulatory--yield--g1,0.55,536
+nan,nan,nan,regulatory--yield--g1,0.73,537
+nan,nan,nan,regulatory--yield--g1,0.74,538
+nan,nan,nan,regulatory--yield--g1,0.74,538
+nan,nan,nan,regulatory--yield--g1,0.65,539
+nan,nan,nan,regulatory--stop--g1,0.25,585
+nan,nan,nan,regulatory--stop--g1,0.29,588
+nan,nan,nan,regulatory--stop--g1,0.28,589
+nan,nan,nan,regulatory--stop--g1,0.51,593
+nan,nan,nan,regulatory--stop--g1,0.51,594
+nan,nan,nan,regulatory--stop--g1,0.34,595
+362905.4986790912,5107482.216179975,182.52305164924184,regulatory--stop--g1,0.47,596
+362905.5900063489,5107482.225611348,182.5129306881814,regulatory--stop--g1,0.35,597
+362905.57584892045,5107482.2275468325,182.50063514070297,regulatory--stop--g1,0.43,598
+362905.6353441893,5107482.236104681,182.4496289041438,regulatory--stop--g1,0.32,599
+362905.66868296126,5107482.241992927,182.43099592168767,regulatory--stop--g1,0.34,600
+nan,nan,nan,information--pedestrians-crossing--g1,0.48,603
+nan,nan,nan,information--pedestrians-crossing--g1,0.49,604
+nan,nan,nan,information--pedestrians-crossing--g1,0.53,605
+nan,nan,nan,information--pedestrians-crossing--g1,0.42,610
+nan,nan,nan,information--pedestrians-crossing--g1,0.42,610
+nan,nan,nan,information--pedestrians-crossing--g1,0.56,611
+nan,nan,nan,information--pedestrians-crossing--g1,0.56,611
+nan,nan,nan,information--pedestrians-crossing--g1,0.62,612
+nan,nan,nan,information--pedestrians-crossing--g1,0.62,612
+362936.713840856,5107471.521486348,181.46564723747713,information--pedestrians-crossing--g1,0.57,613
+nan,nan,nan,information--pedestrians-crossing--g1,0.59,614
+nan,nan,nan,information--pedestrians-crossing--g1,0.59,614
+nan,nan,nan,information--pedestrians-crossing--g1,0.63,615
+nan,nan,nan,information--pedestrians-crossing--g1,0.49,616
+362950.29899994686,5107473.398520439,181.6484313283862,information--pedestrians-crossing--g1,0.57,617
+362955.6373216252,5107473.129380578,181.61990685286176,information--pedestrians-crossing--g1,0.52,618
+362962.6098051417,5107472.033754205,181.16737938033427,information--pedestrians-crossing--g1,0.46,619
+362950.272681765,5107473.443429531,181.69684041929534,information--pedestrians-crossing--g1,0.40,620
+362950.272681765,5107473.443429531,181.69684041929534,information--pedestrians-crossing--g1,0.41,621
+362950.2579940818,5107473.482514573,181.72387707618685,information--pedestrians-crossing--g1,0.45,622
+362950.2437575226,5107473.466511348,181.7438222374772,information--pedestrians-crossing--g1,0.56,623
+362950.2355011123,5107473.502380579,181.74249659645153,information--pedestrians-crossing--g1,0.43,624
+nan,nan,nan,regulatory--yield--g1,0.40,627
+nan,nan,nan,regulatory--yield--g1,0.27,628
+nan,nan,nan,regulatory--yield--g1,0.31,630
+nan,nan,nan,regulatory--yield--g1,0.40,631
+nan,nan,nan,regulatory--yield--g1,0.36,632
+nan,nan,nan,regulatory--yield--g1,0.47,633
+nan,nan,nan,regulatory--yield--g1,0.42,634
+nan,nan,nan,regulatory--yield--g1,0.48,635
+nan,nan,nan,regulatory--yield--g1,0.44,636
+nan,nan,nan,regulatory--yield--g1,0.38,637
+nan,nan,nan,regulatory--yield--g1,0.42,638
+nan,nan,nan,regulatory--yield--g1,0.44,639
+nan,nan,nan,regulatory--yield--g1,0.36,640
+nan,nan,nan,regulatory--yield--g1,0.28,641
+nan,nan,nan,regulatory--yield--g1,0.32,642
+nan,nan,nan,regulatory--yield--g1,0.45,643
+nan,nan,nan,regulatory--yield--g1,0.60,644
+nan,nan,nan,regulatory--yield--g1,0.62,645
+362995.230354993,5107481.38741757,182.6552783149443,regulatory--yield--g1,0.74,646
+362995.22209546214,5107481.409149241,182.6118589601056,regulatory--yield--g1,0.49,647
+nan,nan,nan,regulatory--yield--g1,0.33,662
+nan,nan,nan,regulatory--yield--g1,0.35,666
+nan,nan,nan,regulatory--yield--g1,0.25,667
+nan,nan,nan,information--pedestrians-crossing--g1,0.33,671
+nan,nan,nan,information--pedestrians-crossing--g1,0.33,671
+nan,nan,nan,regulatory--yield--g1,0.26,672
+nan,nan,nan,regulatory--yield--g1,0.27,673
+nan,nan,nan,regulatory--yield--g1,0.29,674
+nan,nan,nan,regulatory--yield--g1,0.50,675
+nan,nan,nan,regulatory--yield--g1,0.50,675
+nan,nan,nan,regulatory--yield--g1,0.38,676
+nan,nan,nan,regulatory--yield--g1,0.38,676
+nan,nan,nan,regulatory--yield--g1,0.33,677
+nan,nan,nan,regulatory--yield--g1,0.33,677
+363071.1137943869,5107493.47082666,182.48061164827763,information--pedestrians-crossing--g1,0.28,678
+363071.1137943869,5107493.47082666,182.48061164827763,information--pedestrians-crossing--g1,0.28,678
+nan,nan,nan,regulatory--yield--g1,0.43,679
+nan,nan,nan,regulatory--yield--g1,0.43,679
+nan,nan,nan,regulatory--yield--g1,0.43,679
+nan,nan,nan,regulatory--yield--g1,0.43,679
+363071.1510632041,5107493.678213757,182.32956863752491,information--pedestrians-crossing--g1,0.38,680
+363071.1510632041,5107493.678213757,182.32956863752491,information--pedestrians-crossing--g1,0.38,680
+363071.1510632041,5107493.678213757,182.32956863752491,information--pedestrians-crossing--g1,0.38,680
+nan,nan,nan,regulatory--yield--g1,0.39,681
+nan,nan,nan,regulatory--yield--g1,0.39,681
+nan,nan,nan,regulatory--yield--g1,0.39,681
+nan,nan,nan,regulatory--yield--g1,0.49,682
+nan,nan,nan,regulatory--yield--g1,0.49,682
+nan,nan,nan,regulatory--yield--g1,0.49,682
+363071.15110069327,5107493.643042877,182.46046750413348,information--pedestrians-crossing--g1,0.59,683
+363071.15110069327,5107493.643042877,182.46046750413348,information--pedestrians-crossing--g1,0.59,683
+363071.15110069327,5107493.643042877,182.46046750413348,information--pedestrians-crossing--g1,0.59,683
+363071.15110069327,5107493.643042877,182.46046750413348,information--pedestrians-crossing--g1,0.59,683
+363071.1450562917,5107493.658469518,182.49975450542047,information--pedestrians-crossing--g1,0.66,684
+363071.1450562917,5107493.658469518,182.49975450542047,information--pedestrians-crossing--g1,0.66,684
+363071.1450562917,5107493.658469518,182.49975450542047,information--pedestrians-crossing--g1,0.66,684
+363071.1450562917,5107493.658469518,182.49975450542047,information--pedestrians-crossing--g1,0.66,684
+363071.1445358835,5107493.645581762,182.5880538251484,information--pedestrians-crossing--g1,0.60,685
+363071.1445358835,5107493.645581762,182.5880538251484,information--pedestrians-crossing--g1,0.60,685
+363071.1445358835,5107493.645581762,182.5880538251484,information--pedestrians-crossing--g1,0.60,685
+363071.1445358835,5107493.645581762,182.5880538251484,information--pedestrians-crossing--g1,0.60,685
+363071.1445358835,5107493.645581762,182.5880538251484,information--pedestrians-crossing--g1,0.60,685
+nan,nan,nan,regulatory--yield--g1,0.63,686
+nan,nan,nan,regulatory--yield--g1,0.63,686
+nan,nan,nan,regulatory--yield--g1,0.63,686
+nan,nan,nan,regulatory--yield--g1,0.63,686
+363088.5571006933,5107499.912178013,182.38115669332265,regulatory--yield--g1,0.65,687
+363088.5571006933,5107499.912178013,182.38115669332265,regulatory--yield--g1,0.65,687
+363088.5571006933,5107499.912178013,182.38115669332265,regulatory--yield--g1,0.65,687
+363088.5571006933,5107499.912178013,182.38115669332265,regulatory--yield--g1,0.65,687
+363088.5573808849,5107499.914029192,182.38322768203284,regulatory--yield--g1,0.56,688
+363088.5573808849,5107499.914029192,182.38322768203284,regulatory--yield--g1,0.56,688
+363088.5573808849,5107499.914029192,182.38322768203284,regulatory--yield--g1,0.56,688
+363088.5573808849,5107499.914029192,182.38322768203284,regulatory--yield--g1,0.56,688
+363088.55654105364,5107499.916066661,182.3791716482776,regulatory--yield--g1,0.60,689
+363088.55654105364,5107499.916066661,182.3791716482776,regulatory--yield--g1,0.60,689
+363088.55654105364,5107499.916066661,182.3791716482776,regulatory--yield--g1,0.60,689
+363088.5554725478,5107499.918068041,182.4755196942546,regulatory--yield--g1,0.58,690
+363088.5554725478,5107499.918068041,182.4755196942546,regulatory--yield--g1,0.58,690
+363088.5581088524,5107499.90846817,182.52733491871786,regulatory--yield--g1,0.61,691
+363088.5581088524,5107499.90846817,182.52733491871786,regulatory--yield--g1,0.61,691
+363089.74005309335,5107493.702901287,182.97462159852637,regulatory--yield--g1,0.66,692
+363089.74005309335,5107493.702901287,182.97462159852637,regulatory--yield--g1,0.66,692
+363089.74005309335,5107493.702901287,182.97462159852637,regulatory--yield--g1,0.66,692
+363089.7445703433,5107493.720613547,182.9784586428131,regulatory--yield--g1,0.61,693
+363089.7445703433,5107493.720613547,182.9784586428131,regulatory--yield--g1,0.61,693
+363089.7594277203,5107493.7615516605,182.9907783149443,regulatory--yield--g1,0.63,694
+363089.75668772036,5107493.775246659,182.9982783149443,regulatory--yield--g1,0.58,695
+363089.75668772036,5107493.775246659,182.9982783149443,regulatory--yield--g1,0.58,695
+363089.75668772036,5107493.775246659,182.9982783149443,regulatory--yield--g1,0.58,695
+nan,nan,nan,information--pedestrians-crossing--g1,0.60,696
+nan,nan,nan,information--pedestrians-crossing--g1,0.60,696
+nan,nan,nan,information--pedestrians-crossing--g1,0.52,697
+nan,nan,nan,information--pedestrians-crossing--g1,0.52,697
+nan,nan,nan,information--pedestrians-crossing--g1,0.52,697
+nan,nan,nan,information--pedestrians-crossing--g1,0.51,698
+nan,nan,nan,information--pedestrians-crossing--g1,0.51,698
+nan,nan,nan,information--pedestrians-crossing--g1,0.41,699
+nan,nan,nan,information--pedestrians-crossing--g1,0.39,700
+nan,nan,nan,information--pedestrians-crossing--g1,0.32,701
+nan,nan,nan,information--pedestrians-crossing--g1,0.46,702
+nan,nan,nan,information--pedestrians-crossing--g1,0.38,703
+nan,nan,nan,information--pedestrians-crossing--g1,0.38,703
+nan,nan,nan,information--pedestrians-crossing--g1,0.51,704
+nan,nan,nan,information--pedestrians-crossing--g1,0.37,705
+nan,nan,nan,information--pedestrians-crossing--g1,0.34,706
+nan,nan,nan,information--pedestrians-crossing--g1,0.27,707
+nan,nan,nan,information--pedestrians-crossing--g1,0.41,708
+nan,nan,nan,information--pedestrians-crossing--g1,0.40,709
+nan,nan,nan,information--pedestrians-crossing--g1,0.39,720
+nan,nan,nan,information--pedestrians-crossing--g1,0.30,721
+nan,nan,nan,information--pedestrians-crossing--g1,0.34,722
+363140.80960772024,5107512.645666662,183.01015831494428,information--pedestrians-crossing--g1,0.29,723
+nan,nan,nan,regulatory--stop--g1,0.43,744
+nan,nan,nan,regulatory--stop--g1,0.33,745
+363175.79432024906,5107537.975136005,181.37033589874878,regulatory--stop--g1,0.32,746
+363175.7787482794,5107538.011738279,181.35037377753667,regulatory--stop--g1,0.26,747
+nan,nan,nan,information--pedestrians-crossing--g1,0.35,785
+nan,nan,nan,information--pedestrians-crossing--g1,0.35,786
+nan,nan,nan,information--pedestrians-crossing--g1,0.50,790
+nan,nan,nan,information--pedestrians-crossing--g1,0.46,791
+nan,nan,nan,information--pedestrians-crossing--g1,0.57,792
+nan,nan,nan,information--pedestrians-crossing--g1,0.53,794
+nan,nan,nan,information--pedestrians-crossing--g1,0.42,795
+363269.18391975394,5107595.254020926,180.95265533037923,information--pedestrians-crossing--g1,0.65,796
+363269.1756811574,5107595.243823746,180.95815490363668,information--pedestrians-crossing--g1,0.52,797
+363269.1892668717,5107595.292573316,180.98710298798474,information--pedestrians-crossing--g1,0.62,798
+363269.1860693927,5107595.2974185,181.0152828845588,information--pedestrians-crossing--g1,0.61,799
+363269.18040933425,5107595.30075503,181.08511476626174,information--pedestrians-crossing--g1,0.36,800
+363269.1961724326,5107595.322173138,181.02882346884618,information--pedestrians-crossing--g1,0.45,801
+363269.28604752914,5107595.490842498,181.03759943843696,information--pedestrians-crossing--g1,0.42,802
+nan,nan,nan,information--pedestrians-crossing--g1,0.34,877
+nan,nan,nan,information--pedestrians-crossing--g1,0.47,878
+nan,nan,nan,information--pedestrians-crossing--g1,0.47,878
+nan,nan,nan,information--pedestrians-crossing--g1,0.51,879
+nan,nan,nan,information--pedestrians-crossing--g1,0.51,879
+nan,nan,nan,information--pedestrians-crossing--g1,0.36,880
+nan,nan,nan,information--pedestrians-crossing--g1,0.36,880
+363426.1991631356,5107660.73046071,179.96459468425437,information--pedestrians-crossing--g1,0.42,882
+363426.28834754025,5107660.722927306,179.86276960522378,information--pedestrians-crossing--g1,0.54,883
+363426.17021808063,5107660.744001367,179.94147380513348,information--pedestrians-crossing--g1,0.37,884
+363426.20571740327,5107660.73169443,179.9470709750868,information--pedestrians-crossing--g1,0.33,885
+363426.0710371996,5107660.785313535,180.03352048411816,information--pedestrians-crossing--g1,0.50,887
+363426.07274005865,5107660.798583786,180.06087160733128,information--pedestrians-crossing--g1,0.30,888
+nan,nan,nan,regulatory--keep-right--g1,0.26,889
+nan,nan,nan,regulatory--keep-right--g1,0.29,897
+nan,nan,nan,regulatory--keep-right--g1,0.30,899
+nan,nan,nan,regulatory--keep-right--g1,0.40,900
+nan,nan,nan,regulatory--keep-right--g1,0.47,901
+363465.61307016306,5107679.122628517,177.67761794213004,regulatory--keep-right--g1,0.53,902
+363465.7792043736,5107679.194144309,177.7651811000248,regulatory--keep-right--g1,0.43,903
+363465.82438595255,5107679.189260097,177.77861794213004,regulatory--keep-right--g1,0.58,904
+363469.97076835955,5107678.603510741,177.19755242869613,regulatory--keep-right--g1,0.48,905
+363469.8249620659,5107678.029775077,177.17715802310173,regulatory--pass-on-either-side--g1,0.46,906
+363469.8249620659,5107678.029775077,177.17715802310173,regulatory--pass-on-either-side--g1,0.46,906
+363469.5596343736,5107677.577124308,177.15719110002476,regulatory--pass-on-either-side--g1,0.42,907
+nan,nan,nan,regulatory--no-parking--g1,0.26,956
+nan,nan,nan,regulatory--no-parking--g1,0.45,957
+nan,nan,nan,regulatory--no-parking--g1,0.43,958
+nan,nan,nan,regulatory--no-stopping--g15,0.32,959
+nan,nan,nan,regulatory--no-parking--g1,0.58,960
+363514.16997192096,5107769.636694239,180.2742991808559,regulatory--no-parking--g1,0.66,961
+363514.2283178261,5107769.594036913,180.2993088791318,regulatory--no-parking--g1,0.58,962
+363514.3149376947,5107769.545119835,180.28344352609403,regulatory--no-parking--g1,0.53,963
+363514.0582050939,5107769.509304817,180.4142823539328,regulatory--no-parking--g1,0.51,964
+363514.12014668947,5107769.389196555,180.4587609864115,regulatory--no-parking--g1,0.58,965
+363514.2624918073,5107769.296109011,180.42506906721957,regulatory--no-stopping--g15,0.40,966
+nan,nan,nan,regulatory--yield--g1,0.39,998
+nan,nan,nan,regulatory--yield--g1,0.43,999
+nan,nan,nan,regulatory--yield--g1,0.44,1000
+nan,nan,nan,regulatory--yield--g1,0.54,1001
+nan,nan,nan,regulatory--yield--g1,0.54,1001
+nan,nan,nan,regulatory--yield--g1,0.35,1002
+nan,nan,nan,regulatory--yield--g1,0.56,1003
+nan,nan,nan,regulatory--yield--g1,0.51,1004
+nan,nan,nan,regulatory--yield--g1,0.51,1004
+nan,nan,nan,regulatory--yield--g1,0.51,1005
+nan,nan,nan,regulatory--yield--g1,0.49,1006
+nan,nan,nan,regulatory--yield--g1,0.56,1008
+363613.79714770755,5107784.077581852,180.45892430897703,regulatory--yield--g1,0.52,1009
+363613.79714770755,5107784.077581852,180.45892430897703,regulatory--yield--g1,0.52,1009
+363613.85582781327,5107783.962723733,180.494539642751,regulatory--yield--g1,0.48,1010
+363613.50636951096,5107784.160784169,180.49223770678674,regulatory--yield--g1,0.47,1011
+363613.224311314,5107784.0905628055,180.60748871018285,regulatory--yield--g1,0.53,1013
+363612.6208572251,5107784.301880595,180.61051023098628,regulatory--yield--g1,0.60,1014
+363612.7399740317,5107784.304504965,180.61831275199467,regulatory--yield--g1,0.72,1015
+363626.5818291813,5107763.089652142,180.7950635825595,regulatory--yield--g1,0.47,1016
+363632.87593311473,5107804.271789093,180.7655984662804,regulatory--no-stopping--g15,0.60,1024
+363632.77578921034,5107804.5725772865,180.89719221628042,regulatory--no-stopping--g15,0.51,1025
+363632.5449059123,5107806.205419977,180.63109564142167,regulatory--no-stopping--g15,0.59,1026
+363632.3004386577,5107807.743631496,180.62416649349126,regulatory--no-stopping--g15,0.62,1027
+363630.77015822637,5107808.202914388,180.8846410194719,regulatory--no-stopping--g15,0.63,1028
+363629.5601676826,5107808.042511315,180.8650429107248,regulatory--no-stopping--g15,0.61,1029
+363629.31039140624,5107808.105598402,180.76711197979392,regulatory--no-stopping--g15,0.69,1030
+nan,nan,nan,information--pedestrians-crossing--g1,0.28,1054
+nan,nan,nan,information--pedestrians-crossing--g1,0.31,1055
+363624.81864790636,5107878.491993151,180.5859275931644,information--pedestrians-crossing--g1,0.37,1056
+363632.26063511986,5107907.5247753365,181.05675387182404,information--pedestrians-crossing--g1,0.38,1059
+363636.2237980517,5107912.354366608,180.9352398662218,information--pedestrians-crossing--g1,0.37,1060
+363625.03370362445,5107877.391342923,180.6731353254581,information--pedestrians-crossing--g1,0.50,1061
+363625.080868566,5107876.956227486,180.79053829103103,information--pedestrians-crossing--g1,0.60,1062
+363625.080868566,5107876.956227486,180.79053829103103,information--pedestrians-crossing--g1,0.60,1062
+363624.8090872673,5107876.427160725,180.8837300623002,information--pedestrians-crossing--g1,0.61,1063
+nan,nan,nan,information--pedestrians-crossing--g1,0.27,1088
+nan,nan,nan,information--pedestrians-crossing--g1,0.41,1089
+nan,nan,nan,information--pedestrians-crossing--g1,0.35,1090
+nan,nan,nan,information--pedestrians-crossing--g1,0.44,1091
+nan,nan,nan,information--pedestrians-crossing--g1,0.45,1092
+nan,nan,nan,information--pedestrians-crossing--g1,0.58,1093
+nan,nan,nan,information--pedestrians-crossing--g1,0.62,1094
+nan,nan,nan,information--pedestrians-crossing--g1,0.56,1095
+363614.49106734275,5107943.95476979,181.15238777902533,information--pedestrians-crossing--g1,0.51,1096
+363614.47637491336,5107943.948315552,181.20317128185022,information--pedestrians-crossing--g1,0.38,1097
+363611.7548043387,5107970.398239691,180.48475656920652,regulatory--go-straight--g1,0.27,1106
+363615.8034049133,5107991.50286972,180.97241461518354,regulatory--go-straight--g1,0.40,1107
+363618.97472158,5108002.20509333,181.06466461518355,regulatory--go-straight--g1,0.47,1108
+363611.4929344833,5107971.567612326,180.81122375496847,regulatory--go-straight--g1,0.59,1109
+363611.43600908003,5107971.438421803,180.92127919851688,regulatory--go-straight--g1,0.39,1110
+363609.23177991336,5107988.486557219,180.75770628185023,regulatory--no-entry--g1,0.54,1119
+363609.22562158003,5107988.6040355535,180.7733779485169,regulatory--no-entry--g1,0.65,1120
+363609.22562158003,5107988.6040355535,180.7733779485169,regulatory--no-entry--g1,0.65,1120
+363609.22562158003,5107988.6040355535,180.7733779485169,regulatory--no-entry--g1,0.65,1120
+363609.0002750684,5107994.620724855,181.31237004154013,regulatory--no-entry--g1,0.44,1121
+363608.99882158,5107994.655670313,181.35536699613596,regulatory--no-entry--g1,0.71,1122
+363609.0000557573,5107994.721794033,181.36944098649158,regulatory--no-entry--g1,0.31,1123
+nan,nan,nan,information--pedestrians-crossing--g1,0.45,1147
+nan,nan,nan,information--pedestrians-crossing--g1,0.27,1148
+nan,nan,nan,information--pedestrians-crossing--g1,0.38,1149
+nan,nan,nan,information--pedestrians-crossing--g1,0.39,1150
+nan,nan,nan,information--pedestrians-crossing--g1,0.53,1151
+nan,nan,nan,information--pedestrians-crossing--g1,0.48,1152
+nan,nan,nan,information--pedestrians-crossing--g1,0.51,1153
+nan,nan,nan,information--pedestrians-crossing--g1,0.61,1154
+363602.3548975933,5108090.970807278,181.80033347646744,information--pedestrians-crossing--g1,0.55,1155
+363602.0223225933,5108085.366515611,181.7951668098008,information--pedestrians-crossing--g1,0.60,1156
+363599.6861720185,5108071.471348945,181.73935071784675,information--pedestrians-crossing--g1,0.64,1157
+363602.97743925994,5108083.167498944,181.77348347646745,information--pedestrians-crossing--g1,0.52,1158
+363599.60493454296,5108071.488254605,181.67702215571273,information--pedestrians-crossing--g1,0.70,1159
+363599.5939969523,5108071.488764329,181.69844886108282,information--pedestrians-crossing--g1,0.59,1160
+363600.17820925993,5108072.263740944,181.75458547646747,information--pedestrians-crossing--g1,0.66,1161
+363599.49268925993,5108071.503628944,181.7168601431341,information--pedestrians-crossing--g1,0.49,1162
+363591.10060947057,5108222.49486055,181.17862587238412,regulatory--no-stopping--g15,0.46,1236
+363591.0991620731,5108222.38755601,181.34224492000317,regulatory--no-parking--g1,0.48,1237
+nan,nan,nan,regulatory--yield--g1,0.40,1291
+nan,nan,nan,regulatory--yield--g1,0.40,1292
+nan,nan,nan,regulatory--yield--g1,0.36,1293
+nan,nan,nan,regulatory--yield--g1,0.36,1293
+nan,nan,nan,regulatory--yield--g1,0.48,1294
+nan,nan,nan,regulatory--yield--g1,0.48,1294
+nan,nan,nan,regulatory--yield--g1,0.48,1294
+nan,nan,nan,regulatory--yield--g1,0.58,1295
+nan,nan,nan,regulatory--yield--g1,0.58,1295
+nan,nan,nan,regulatory--yield--g1,0.58,1295
+363612.92178033217,5108349.427587476,185.60504289450995,regulatory--yield--g1,0.66,1296
+363612.92178033217,5108349.427587476,185.60504289450995,regulatory--yield--g1,0.66,1296
+363617.378852356,5108344.408561286,186.1725893230814,regulatory--yield--g1,0.58,1297
+363617.378852356,5108344.408561286,186.1725893230814,regulatory--yield--g1,0.58,1297
+363617.378852356,5108344.408561286,186.1725893230814,regulatory--yield--g1,0.58,1297
+363617.378852356,5108344.408561286,186.1725893230814,regulatory--yield--g1,0.58,1297
+363618.01429197914,5108345.424596847,186.17621750779477,regulatory--yield--g1,0.60,1298
+363618.01429197914,5108345.424596847,186.17621750779477,regulatory--yield--g1,0.60,1298
+363618.01429197914,5108345.424596847,186.17621750779477,regulatory--yield--g1,0.60,1298
+363617.83533008595,5108345.338773928,186.2307057023917,regulatory--yield--g1,0.59,1299
+363617.83533008595,5108345.338773928,186.2307057023917,regulatory--yield--g1,0.59,1299
+363617.83533008595,5108345.338773928,186.2307057023917,regulatory--yield--g1,0.59,1299
+363617.7326133855,5108345.250497558,186.2566849113167,regulatory--yield--g1,0.55,1300
+363617.3854231894,5108344.952777952,186.30858098974804,regulatory--yield--g1,0.56,1301
+363617.3854231894,5108344.952777952,186.30858098974804,regulatory--yield--g1,0.56,1301
+363607.3324565226,5108375.460311285,184.6778809897481,regulatory--pass-on-either-side--g1,0.27,1322
+nan,nan,nan,information--parking--g1,0.41,1350
+nan,nan,nan,information--parking--g1,0.46,1351
+nan,nan,nan,information--parking--g1,0.49,1352
+nan,nan,nan,information--parking--g1,0.49,1353
+nan,nan,nan,information--parking--g1,0.50,1354
+nan,nan,nan,information--parking--g1,0.54,1355
+nan,nan,nan,information--parking--g1,0.27,1356
+nan,nan,nan,regulatory--no-entry--g1,0.37,1373
+nan,nan,nan,regulatory--no-entry--g1,0.46,1375
+nan,nan,nan,regulatory--no-entry--g1,0.50,1376
+nan,nan,nan,regulatory--no-entry--g1,0.54,1377
+nan,nan,nan,regulatory--no-entry--g1,0.52,1378
+nan,nan,nan,regulatory--no-entry--g1,0.59,1379
+nan,nan,nan,regulatory--no-entry--g1,0.61,1380
+nan,nan,nan,regulatory--no-entry--g1,0.61,1380
+nan,nan,nan,regulatory--no-entry--g1,0.60,1381
+nan,nan,nan,regulatory--no-entry--g1,0.60,1381
+nan,nan,nan,regulatory--no-entry--g1,0.64,1382
+nan,nan,nan,regulatory--no-entry--g1,0.64,1382
+nan,nan,nan,regulatory--no-entry--g1,0.63,1383
+363498.09867610515,5108422.025967212,187.10384125258145,regulatory--no-entry--g1,0.61,1384
+363498.0826761052,5108422.028038641,187.13884125258144,regulatory--no-entry--g1,0.65,1385
+363498.0757349287,5108422.029114271,187.172488311405,regulatory--no-entry--g1,0.69,1386
+363498.0053299513,5108422.018774904,187.21911048335068,regulatory--no-entry--g1,0.76,1387
+363497.9666504641,5108421.749723623,187.09904638078658,regulatory--no-entry--g1,0.64,1388
+nan,nan,nan,regulatory--no-entry--g1,0.41,1393
+nan,nan,nan,regulatory--no-entry--g1,0.52,1394
+nan,nan,nan,information--pedestrians-crossing--g1,0.35,1399
+nan,nan,nan,information--pedestrians-crossing--g1,0.34,1400
+nan,nan,nan,information--pedestrians-crossing--g1,0.54,1401
+nan,nan,nan,information--pedestrians-crossing--g1,0.44,1402
+nan,nan,nan,information--pedestrians-crossing--g1,0.38,1403
+nan,nan,nan,information--pedestrians-crossing--g1,0.41,1404
+nan,nan,nan,information--pedestrians-crossing--g1,0.41,1404
+nan,nan,nan,information--pedestrians-crossing--g1,0.56,1405
+nan,nan,nan,information--pedestrians-crossing--g1,0.46,1406
+nan,nan,nan,information--pedestrians-crossing--g1,0.46,1406
+nan,nan,nan,information--pedestrians-crossing--g1,0.47,1407
+nan,nan,nan,information--pedestrians-crossing--g1,0.47,1407
+nan,nan,nan,information--pedestrians-crossing--g1,0.47,1407
+nan,nan,nan,information--pedestrians-crossing--g1,0.47,1407
+nan,nan,nan,information--pedestrians-crossing--g1,0.47,1408
+nan,nan,nan,information--pedestrians-crossing--g1,0.47,1408
+nan,nan,nan,information--pedestrians-crossing--g1,0.47,1408
+363445.7914912063,5108429.51719902,187.28903619400577,information--pedestrians-crossing--g1,0.46,1409
+363445.7914912063,5108429.51719902,187.28903619400577,information--pedestrians-crossing--g1,0.46,1409
+363445.7914912063,5108429.51719902,187.28903619400577,information--pedestrians-crossing--g1,0.46,1409
+363445.7914912063,5108429.51719902,187.28903619400577,information--pedestrians-crossing--g1,0.39,1410
+363445.7914912063,5108429.51719902,187.28903619400577,information--pedestrians-crossing--g1,0.39,1410
+363445.79268723604,5108429.518114653,187.31614041236804,information--pedestrians-crossing--g1,0.32,1412
+363445.8142565909,5108429.5166759435,188.1089323478519,regulatory--go-straight--g1,0.25,1414
+363445.737520384,5108429.262448357,188.10391683061053,regulatory--go-straight--g1,0.54,1415
+363445.737520384,5108429.262448357,188.10391683061053,regulatory--go-straight--g1,0.54,1415
+nan,nan,nan,regulatory--no-parking--g1,0.27,1425
+nan,nan,nan,regulatory--no-parking--g1,0.26,1426
+nan,nan,nan,regulatory--no-parking--g1,0.27,1427
+363209.26605582825,5108456.645455257,188.56312843801263,warning--road-bump--g1,0.26,1529
+nan,nan,nan,information--parking--g1,0.38,1539
+nan,nan,nan,information--parking--g1,0.49,1540
+nan,nan,nan,information--parking--g1,0.49,1540
+nan,nan,nan,information--parking--g1,0.41,1541
+nan,nan,nan,information--parking--g1,0.41,1541
+nan,nan,nan,information--parking--g1,0.48,1542
+nan,nan,nan,information--parking--g1,0.48,1542
+nan,nan,nan,information--parking--g1,0.44,1543
+nan,nan,nan,information--parking--g1,0.56,1544
+nan,nan,nan,information--parking--g1,0.56,1544
+nan,nan,nan,information--pedestrians-crossing--g1,0.52,1545
+nan,nan,nan,information--pedestrians-crossing--g1,0.52,1545
+nan,nan,nan,information--parking--g1,0.52,1546
+nan,nan,nan,information--parking--g1,0.52,1546
+nan,nan,nan,information--parking--g1,0.52,1546
+363171.6293669916,5108460.8091950705,188.09837734339808,information--pedestrians-crossing--g1,0.56,1547
+363171.6293669916,5108460.8091950705,188.09837734339808,information--pedestrians-crossing--g1,0.56,1547
+363171.6293669916,5108460.8091950705,188.09837734339808,information--pedestrians-crossing--g1,0.56,1547
+363177.67928365816,5108462.237611737,188.84229401006473,information--parking--g1,0.60,1548
+363177.67928365816,5108462.237611737,188.84229401006473,information--parking--g1,0.60,1548
+363177.67928365816,5108462.237611737,188.84229401006473,information--parking--g1,0.60,1548
+363167.4022067351,5108462.40091943,188.06002477929547,information--pedestrians-crossing--g1,0.58,1549
+363167.4022067351,5108462.40091943,188.06002477929547,information--pedestrians-crossing--g1,0.58,1549
+363167.4022067351,5108462.40091943,188.06002477929547,information--pedestrians-crossing--g1,0.58,1549
+363149.47392002185,5108471.396975374,187.51820310097384,information--pedestrians-crossing--g1,0.55,1550
+363149.47392002185,5108471.396975374,187.51820310097384,information--pedestrians-crossing--g1,0.55,1550
+363138.4847836582,5108479.645361737,186.89585651006473,information--pedestrians-crossing--g1,0.65,1551
+363138.4847836582,5108479.645361737,186.89585651006473,information--pedestrians-crossing--g1,0.65,1551
+363149.1996365994,5108475.168729384,187.51714695124122,information--pedestrians-crossing--g1,0.67,1552
+363145.8901408011,5108480.816254594,187.5156511529219,information--pedestrians-crossing--g1,0.63,1553
+363135.35731490824,5108499.433486737,188.69204401006476,information--pedestrians-crossing--g1,0.54,1554
+363165.55210974516,5108462.592350868,188.17031574919517,information--pedestrians-crossing--g1,0.29,1555
+363146.49865865824,5108462.198674237,188.15679401006474,regulatory--no-entry--g1,0.39,1560
+nan,nan,nan,regulatory--yield--g1,0.36,1609
+nan,nan,nan,regulatory--yield--g1,0.51,1610
+nan,nan,nan,regulatory--yield--g1,0.44,1611
+nan,nan,nan,regulatory--yield--g1,0.62,1612
+nan,nan,nan,regulatory--yield--g1,0.61,1613
+nan,nan,nan,regulatory--yield--g1,0.61,1613
+nan,nan,nan,regulatory--yield--g1,0.41,1614
+nan,nan,nan,regulatory--yield--g1,0.43,1615
+nan,nan,nan,regulatory--yield--g1,0.52,1616
+363060.6027223049,5108520.124469235,187.8428318649349,regulatory--yield--g1,0.54,1617
+363060.6029502269,5108520.124160792,187.86487472207773,regulatory--yield--g1,0.50,1618
+363060.60485690896,5108520.127890055,187.89413509074134,regulatory--yield--g1,0.55,1619
+363060.6033982219,5108520.125301771,187.9796178298472,regulatory--yield--g1,0.60,1620
+363060.603085941,5108520.124051053,187.963340955844,regulatory--yield--g1,0.63,1621
+363060.6085789645,5108520.130266275,187.97758070214417,regulatory--yield--g1,0.77,1622
+363060.6085789645,5108520.130266275,187.97758070214417,regulatory--yield--g1,0.77,1622
+363062.4076477059,5108527.573571507,186.95241568846427,regulatory--yield--g1,0.67,1623
+363063.3576494632,5108525.541749965,186.89187966367697,regulatory--yield--g1,0.47,1624
+nan,nan,nan,information--pedestrians-crossing--g1,0.34,1633
+nan,nan,nan,information--pedestrians-crossing--g1,0.39,1634
+nan,nan,nan,information--pedestrians-crossing--g1,0.39,1634
+363049.9758284069,5108546.5898266435,189.29479350877048,warning--children--g1,0.37,1636
+363049.9758284069,5108546.5898266435,189.29479350877048,warning--children--g1,0.37,1636
+nan,nan,nan,regulatory--keep-right--g1,0.39,1637
+nan,nan,nan,regulatory--keep-right--g1,0.59,1638
+nan,nan,nan,regulatory--keep-right--g1,0.59,1638
+nan,nan,nan,regulatory--keep-right--g1,0.59,1639
+nan,nan,nan,regulatory--keep-right--g1,0.55,1640
+nan,nan,nan,regulatory--keep-right--g1,0.55,1640
+nan,nan,nan,regulatory--keep-right--g1,0.52,1641
+nan,nan,nan,regulatory--keep-right--g1,0.52,1641
+nan,nan,nan,regulatory--keep-right--g1,0.52,1641
+nan,nan,nan,regulatory--keep-right--g1,0.54,1642
+nan,nan,nan,regulatory--keep-right--g1,0.54,1642
+nan,nan,nan,regulatory--keep-right--g1,0.59,1643
+nan,nan,nan,regulatory--keep-right--g1,0.59,1643
+nan,nan,nan,regulatory--keep-right--g1,0.53,1644
+nan,nan,nan,regulatory--keep-right--g1,0.53,1644
+nan,nan,nan,regulatory--keep-right--g1,0.53,1644
+nan,nan,nan,regulatory--keep-right--g1,0.44,1645
+nan,nan,nan,regulatory--keep-right--g1,0.44,1645
+363009.820697404,5108552.69888316,187.37629715580277,regulatory--keep-right--g1,0.38,1646
+363009.820697404,5108552.69888316,187.37629715580277,regulatory--keep-right--g1,0.38,1646
+363009.46929352626,5108552.535541011,187.3936033394604,regulatory--keep-right--g1,0.44,1647
+363009.46929352626,5108552.535541011,187.3936033394604,regulatory--keep-right--g1,0.44,1647
+363009.46929352626,5108552.535541011,187.3936033394604,regulatory--keep-right--g1,0.44,1647
+363009.136424113,5108552.456601602,187.41219103409708,regulatory--keep-right--g1,0.53,1648
+363009.136424113,5108552.456601602,187.41219103409708,regulatory--keep-right--g1,0.53,1648
+363009.136424113,5108552.456601602,187.41219103409708,regulatory--keep-right--g1,0.53,1648
+363009.3551091325,5108552.151997095,187.40331760421734,regulatory--keep-right--g1,0.68,1649
+363009.3551091325,5108552.151997095,187.40331760421734,regulatory--keep-right--g1,0.68,1649
+363009.3551091325,5108552.151997095,187.40331760421734,regulatory--keep-right--g1,0.68,1649
+nan,nan,nan,information--pedestrians-crossing--g1,0.33,1650
+nan,nan,nan,information--pedestrians-crossing--g1,0.47,1651
+nan,nan,nan,information--pedestrians-crossing--g1,0.47,1651
+nan,nan,nan,information--pedestrians-crossing--g1,0.61,1652
+nan,nan,nan,information--pedestrians-crossing--g1,0.61,1652
+nan,nan,nan,information--pedestrians-crossing--g1,0.61,1652
+363014.14467363246,5108559.248208291,190.43153859272843,information--pedestrians-crossing--g1,0.65,1653
+363014.14467363246,5108559.248208291,190.43153859272843,information--pedestrians-crossing--g1,0.65,1653
+363014.1399434737,5108559.251160672,190.47166557685543,information--pedestrians-crossing--g1,0.59,1654
+363014.1399434737,5108559.251160672,190.47166557685543,information--pedestrians-crossing--g1,0.59,1654
+363014.1399434737,5108559.251160672,190.47166557685543,information--pedestrians-crossing--g1,0.59,1654
+nan,nan,nan,regulatory--yield--g1,0.39,1655
+nan,nan,nan,regulatory--yield--g1,0.39,1655
+363003.904229188,5108564.335589243,189.82937986256965,regulatory--roundabout--g1,0.52,1656
+363003.904229188,5108564.335589243,189.82937986256965,regulatory--roundabout--g1,0.52,1656
+363002.030829188,5108567.031674958,189.97139414828396,regulatory--roundabout--g1,0.62,1657
+363002.030829188,5108567.031674958,189.97139414828396,regulatory--roundabout--g1,0.62,1657
+363003.755979188,5108564.146374958,190.76859414828397,regulatory--yield--g1,0.66,1658
+363003.755979188,5108564.146374958,190.76859414828397,regulatory--yield--g1,0.66,1658
+363003.8128958547,5108564.214374959,189.9989274816173,regulatory--roundabout--g1,0.68,1659
+363003.8128958547,5108564.214374959,189.9989274816173,regulatory--roundabout--g1,0.68,1659
+363003.8128958547,5108564.214374959,189.9989274816173,regulatory--roundabout--g1,0.68,1659
+nan,nan,nan,regulatory--yield--g1,0.71,1660
+nan,nan,nan,regulatory--yield--g1,0.71,1660
+nan,nan,nan,regulatory--yield--g1,0.71,1660
+362988.19053353585,5108560.333657566,188.05683327871873,regulatory--turn-right--g1,0.45,1661
+nan,nan,nan,regulatory--pass-on-either-side--g1,0.35,1662
+nan,nan,nan,regulatory--pass-on-either-side--g1,0.33,1663
+nan,nan,nan,regulatory--pass-on-either-side--g1,0.35,1664
+nan,nan,nan,regulatory--pass-on-either-side--g1,0.42,1665
+nan,nan,nan,regulatory--pass-on-either-side--g1,0.42,1666
+nan,nan,nan,regulatory--pass-on-either-side--g1,0.57,1667
+nan,nan,nan,regulatory--no-entry--g1,0.57,1668
+nan,nan,nan,regulatory--no-entry--g1,0.57,1668
+nan,nan,nan,regulatory--pass-on-either-side--g1,0.46,1669
+nan,nan,nan,regulatory--pass-on-either-side--g1,0.46,1669
+nan,nan,nan,regulatory--pass-on-either-side--g1,0.55,1670
+nan,nan,nan,regulatory--pass-on-either-side--g1,0.47,1671
+nan,nan,nan,regulatory--pass-on-either-side--g1,0.47,1671
+362972.36588436045,5108586.956530131,188.03202518276672,regulatory--no-entry--g1,0.48,1672
+nan,nan,nan,information--pedestrians-crossing--g1,0.49,1678
+nan,nan,nan,information--pedestrians-crossing--g1,0.46,1679
+nan,nan,nan,information--pedestrians-crossing--g1,0.33,1681
+nan,nan,nan,information--pedestrians-crossing--g1,0.53,1682
+nan,nan,nan,information--pedestrians-crossing--g1,0.55,1683
+nan,nan,nan,information--pedestrians-crossing--g1,0.49,1684
+nan,nan,nan,information--pedestrians-crossing--g1,0.49,1684
+nan,nan,nan,information--pedestrians-crossing--g1,0.48,1685
+nan,nan,nan,information--pedestrians-crossing--g1,0.53,1686
+nan,nan,nan,information--pedestrians-crossing--g1,0.62,1687
+nan,nan,nan,information--pedestrians-crossing--g1,0.61,1688
+nan,nan,nan,information--pedestrians-crossing--g1,0.53,1689
+nan,nan,nan,information--pedestrians-crossing--g1,0.61,1690
+nan,nan,nan,information--pedestrians-crossing--g1,0.62,1691
+nan,nan,nan,information--pedestrians-crossing--g1,0.62,1691
+nan,nan,nan,information--pedestrians-crossing--g1,0.68,1692
+nan,nan,nan,information--pedestrians-crossing--g1,0.65,1693
+nan,nan,nan,information--pedestrians-crossing--g1,0.63,1694
+nan,nan,nan,regulatory--keep-right--g1,0.42,1695
+nan,nan,nan,regulatory--keep-right--g1,0.38,1696
+nan,nan,nan,regulatory--keep-right--g1,0.37,1697
+nan,nan,nan,regulatory--keep-right--g1,0.37,1698
+nan,nan,nan,regulatory--keep-right--g1,0.37,1698
+nan,nan,nan,regulatory--keep-right--g1,0.36,1699
+nan,nan,nan,regulatory--keep-right--g1,0.42,1700
+nan,nan,nan,regulatory--keep-right--g1,0.52,1701
+nan,nan,nan,regulatory--keep-right--g1,0.43,1702
+nan,nan,nan,regulatory--keep-right--g1,0.43,1702
+nan,nan,nan,regulatory--keep-right--g1,0.38,1703
+nan,nan,nan,regulatory--keep-right--g1,0.38,1703
+nan,nan,nan,regulatory--keep-right--g1,0.39,1704
+nan,nan,nan,regulatory--keep-right--g1,0.39,1704
+nan,nan,nan,information--pedestrians-crossing--g1,0.41,1705
+nan,nan,nan,information--pedestrians-crossing--g1,0.41,1705
+nan,nan,nan,information--pedestrians-crossing--g1,0.41,1705
+nan,nan,nan,regulatory--keep-right--g1,0.50,1706
+nan,nan,nan,regulatory--keep-right--g1,0.50,1706
+nan,nan,nan,regulatory--keep-right--g1,0.50,1706
+nan,nan,nan,information--pedestrians-crossing--g1,0.49,1707
+nan,nan,nan,information--pedestrians-crossing--g1,0.49,1707
+nan,nan,nan,information--pedestrians-crossing--g1,0.49,1707
+nan,nan,nan,regulatory--keep-right--g1,0.49,1708
+nan,nan,nan,regulatory--keep-right--g1,0.49,1708
+nan,nan,nan,regulatory--keep-right--g1,0.49,1708
+nan,nan,nan,regulatory--keep-right--g1,0.49,1708
+nan,nan,nan,regulatory--keep-right--g1,0.59,1709
+nan,nan,nan,regulatory--keep-right--g1,0.59,1709
+nan,nan,nan,regulatory--keep-right--g1,0.59,1709
+nan,nan,nan,information--pedestrians-crossing--g1,0.43,1710
+nan,nan,nan,information--pedestrians-crossing--g1,0.43,1710
+nan,nan,nan,information--pedestrians-crossing--g1,0.43,1710
+nan,nan,nan,information--pedestrians-crossing--g1,0.43,1710
+nan,nan,nan,information--pedestrians-crossing--g1,0.43,1710
+362916.92174388096,5108507.452119003,189.94336145261897,information--pedestrians-crossing--g1,0.61,1711
+362916.92174388096,5108507.452119003,189.94336145261897,information--pedestrians-crossing--g1,0.61,1711
+362916.92174388096,5108507.452119003,189.94336145261897,information--pedestrians-crossing--g1,0.61,1711
+362916.92174388096,5108507.452119003,189.94336145261897,information--pedestrians-crossing--g1,0.61,1711
+362916.9534938809,5108507.402619003,189.93986145261897,information--pedestrians-crossing--g1,0.66,1712
+362916.9534938809,5108507.402619003,189.93986145261897,information--pedestrians-crossing--g1,0.66,1712
+362916.9534938809,5108507.402619003,189.93986145261897,information--pedestrians-crossing--g1,0.66,1712
+362917.0919438809,5108507.251519004,189.952561452619,information--pedestrians-crossing--g1,0.46,1713
+362917.0919438809,5108507.251519004,189.952561452619,information--pedestrians-crossing--g1,0.46,1713
+362917.0919438809,5108507.251519004,189.952561452619,information--pedestrians-crossing--g1,0.46,1713
+362917.17078234244,5108507.109080542,189.99805376031125,information--pedestrians-crossing--g1,0.46,1714
+362917.17078234244,5108507.109080542,189.99805376031125,information--pedestrians-crossing--g1,0.46,1714
+362917.17078234244,5108507.109080542,189.99805376031125,information--pedestrians-crossing--g1,0.46,1714
+362917.17078234244,5108507.109080542,189.99805376031125,information--pedestrians-crossing--g1,0.46,1714
+362917.16920541937,5108507.117272849,189.98593837569587,information--pedestrians-crossing--g1,0.49,1715
+362917.16920541937,5108507.117272849,189.98593837569587,information--pedestrians-crossing--g1,0.49,1715
+362917.16920541937,5108507.117272849,189.98593837569587,information--pedestrians-crossing--g1,0.49,1715
+362917.16920541937,5108507.117272849,189.98593837569587,information--pedestrians-crossing--g1,0.49,1715
+nan,nan,nan,regulatory--roundabout--g1,0.42,1716
+nan,nan,nan,regulatory--roundabout--g1,0.42,1716
+nan,nan,nan,regulatory--roundabout--g1,0.42,1716
+nan,nan,nan,regulatory--roundabout--g1,0.42,1716
+362917.1757438809,5108507.12921424,189.93798050023804,information--pedestrians-crossing--g1,0.56,1717
+362917.1757438809,5108507.12921424,189.93798050023804,information--pedestrians-crossing--g1,0.56,1717
+362917.1757438809,5108507.12921424,189.93798050023804,information--pedestrians-crossing--g1,0.56,1717
+362917.1757438809,5108507.12921424,189.93798050023804,information--pedestrians-crossing--g1,0.56,1717
+362917.1757438809,5108507.12921424,189.93798050023804,information--pedestrians-crossing--g1,0.56,1717
+362910.33594388084,5108502.059119003,189.18526145261896,regulatory--yield--g1,0.49,1718
+362910.33594388084,5108502.059119003,189.18526145261896,regulatory--yield--g1,0.49,1718
+362910.33594388084,5108502.059119003,189.18526145261896,regulatory--yield--g1,0.49,1718
+362910.33594388084,5108502.059119003,189.18526145261896,regulatory--yield--g1,0.49,1718
+362910.3250166082,5108502.060664457,189.1975432708008,regulatory--yield--g1,0.54,1719
+362910.3250166082,5108502.060664457,189.1975432708008,regulatory--yield--g1,0.54,1719
+362910.3250166082,5108502.060664457,189.1975432708008,regulatory--yield--g1,0.54,1719
+nan,nan,nan,regulatory--yield--g1,0.47,1720
+nan,nan,nan,regulatory--yield--g1,0.47,1720
+362910.02474388096,5108502.092329529,189.2891509263032,regulatory--yield--g1,0.50,1721
+362910.02474388096,5108502.092329529,189.2891509263032,regulatory--yield--g1,0.50,1721
+362910.02474388096,5108502.092329529,189.2891509263032,regulatory--yield--g1,0.50,1721
+362909.53596610314,5108484.96089678,189.34647256373006,regulatory--yield--g1,0.54,1722
+362909.53596610314,5108484.96089678,189.34647256373006,regulatory--yield--g1,0.54,1722
+362908.9497938809,5108483.668819003,189.38286145261895,regulatory--yield--g1,0.39,1723
+nan,nan,nan,regulatory--turn-right--g1,0.34,1731
+nan,nan,nan,regulatory--yield--g1,0.40,1745
+nan,nan,nan,regulatory--yield--g1,0.42,1746
+nan,nan,nan,regulatory--yield--g1,0.57,1747
+nan,nan,nan,regulatory--yield--g1,0.54,1748
+nan,nan,nan,regulatory--yield--g1,0.47,1749
+nan,nan,nan,regulatory--yield--g1,0.47,1749
+nan,nan,nan,regulatory--yield--g1,0.55,1750
+nan,nan,nan,regulatory--yield--g1,0.55,1750
+nan,nan,nan,regulatory--yield--g1,0.58,1751
+nan,nan,nan,regulatory--yield--g1,0.58,1751
+nan,nan,nan,regulatory--yield--g1,0.51,1752
+nan,nan,nan,regulatory--yield--g1,0.51,1752
+nan,nan,nan,regulatory--yield--g1,0.46,1753
+nan,nan,nan,regulatory--yield--g1,0.46,1753
+nan,nan,nan,regulatory--yield--g1,0.56,1754
+nan,nan,nan,regulatory--yield--g1,0.56,1754
+nan,nan,nan,regulatory--roundabout--g1,0.45,1755
+nan,nan,nan,regulatory--roundabout--g1,0.45,1755
+nan,nan,nan,regulatory--yield--g1,0.59,1756
+nan,nan,nan,regulatory--yield--g1,0.59,1756
+362841.3070041214,5108467.869254361,189.46370022790916,regulatory--yield--g1,0.54,1757
+nan,nan,nan,regulatory--keep-right--g1,0.34,1830
+nan,nan,nan,regulatory--keep-right--g1,0.30,1831
+nan,nan,nan,regulatory--keep-right--g1,0.38,1833
+nan,nan,nan,regulatory--keep-right--g1,0.38,1834
+nan,nan,nan,regulatory--keep-right--g1,0.39,1835
+nan,nan,nan,regulatory--keep-right--g1,0.36,1836
+nan,nan,nan,regulatory--keep-right--g1,0.42,1837
+nan,nan,nan,regulatory--yield--g1,0.30,1838
+nan,nan,nan,regulatory--yield--g1,0.30,1838
+nan,nan,nan,regulatory--yield--g1,0.27,1839
+nan,nan,nan,regulatory--yield--g1,0.29,1841
+nan,nan,nan,regulatory--yield--g1,0.41,1842
+nan,nan,nan,regulatory--yield--g1,0.41,1842
+nan,nan,nan,regulatory--yield--g1,0.43,1843
+nan,nan,nan,regulatory--yield--g1,0.43,1843
+nan,nan,nan,regulatory--yield--g1,0.36,1844
+nan,nan,nan,regulatory--yield--g1,0.36,1844
+nan,nan,nan,regulatory--yield--g1,0.36,1844
+nan,nan,nan,regulatory--yield--g1,0.31,1845
+nan,nan,nan,regulatory--yield--g1,0.31,1845
+nan,nan,nan,regulatory--yield--g1,0.42,1846
+nan,nan,nan,regulatory--yield--g1,0.42,1846
+nan,nan,nan,regulatory--roundabout--g1,0.41,1847
+nan,nan,nan,regulatory--roundabout--g1,0.41,1847
+nan,nan,nan,regulatory--yield--g1,0.39,1848
+nan,nan,nan,regulatory--yield--g1,0.39,1848
+nan,nan,nan,regulatory--yield--g1,0.39,1848
+nan,nan,nan,regulatory--yield--g1,0.45,1849
+nan,nan,nan,regulatory--yield--g1,0.45,1849
+nan,nan,nan,regulatory--yield--g1,0.45,1849
+nan,nan,nan,regulatory--yield--g1,0.45,1849
+nan,nan,nan,regulatory--yield--g1,0.45,1849
+362782.01689829835,5108287.613848461,188.64756550192635,regulatory--yield--g1,0.51,1850
+362782.01689829835,5108287.613848461,188.64756550192635,regulatory--yield--g1,0.51,1850
+362782.01689829835,5108287.613848461,188.64756550192635,regulatory--yield--g1,0.51,1850
+362782.01689829835,5108287.613848461,188.64756550192635,regulatory--yield--g1,0.51,1850
+362778.9618748481,5108292.797085517,188.32762517223048,regulatory--roundabout--g1,0.47,1851
+362778.9618748481,5108292.797085517,188.32762517223048,regulatory--roundabout--g1,0.47,1851
+362778.9618748481,5108292.797085517,188.32762517223048,regulatory--roundabout--g1,0.47,1851
+362778.9618748481,5108292.797085517,188.32762517223048,regulatory--roundabout--g1,0.47,1851
+362778.9618748481,5108292.797085517,188.32762517223048,regulatory--roundabout--g1,0.47,1851
+nan,nan,nan,regulatory--yield--g1,0.54,1852
+nan,nan,nan,regulatory--yield--g1,0.54,1852
+nan,nan,nan,regulatory--yield--g1,0.54,1852
+nan,nan,nan,regulatory--yield--g1,0.54,1852
+362778.93418695696,5108292.836267072,188.2735321809341,regulatory--roundabout--g1,0.52,1853
+362778.93418695696,5108292.836267072,188.2735321809341,regulatory--roundabout--g1,0.52,1853
+362778.93418695696,5108292.836267072,188.2735321809341,regulatory--roundabout--g1,0.52,1853
+362778.9629256956,5108292.807723064,188.52225359465552,regulatory--yield--g1,0.49,1854
+362778.9629256956,5108292.807723064,188.52225359465552,regulatory--yield--g1,0.49,1854
+362778.9629256956,5108292.807723064,188.52225359465552,regulatory--yield--g1,0.49,1854
+362778.9629256956,5108292.807723064,188.52225359465552,regulatory--yield--g1,0.49,1854
+362778.9629256956,5108292.807723064,188.52225359465552,regulatory--yield--g1,0.49,1854
+362778.9655711502,5108292.78652866,188.29384520304708,regulatory--roundabout--g1,0.62,1855
+362778.9655711502,5108292.78652866,188.29384520304708,regulatory--roundabout--g1,0.62,1855
+362778.9655711502,5108292.78652866,188.29384520304708,regulatory--roundabout--g1,0.62,1855
+362779.0467828385,5108292.662235154,188.31127117707317,regulatory--roundabout--g1,0.67,1856
+362779.0467828385,5108292.662235154,188.31127117707317,regulatory--roundabout--g1,0.67,1856
+362779.0467828385,5108292.662235154,188.31127117707317,regulatory--roundabout--g1,0.67,1856
+362779.0467828385,5108292.662235154,188.31127117707317,regulatory--roundabout--g1,0.67,1856
+362785.6169256957,5108289.041401388,186.12239520304718,regulatory--yield--g1,0.39,1857
+362785.6169256957,5108289.041401388,186.12239520304718,regulatory--yield--g1,0.39,1857
+362785.6169256957,5108289.041401388,186.12239520304718,regulatory--yield--g1,0.39,1857
+362760.27805236867,5108268.203139993,185.35251106687033,regulatory--turn-right--g1,0.32,1858
+362760.27805236867,5108268.203139993,185.35251106687033,regulatory--turn-right--g1,0.32,1858

@@ -9,7 +9,7 @@ real_h_mm =  900  #da prendere da un file che itera e trova il sengale corretto
 object_h_px = 0 #in imput dal file generato in output da YOLO
 f_m = 4.4
 
-with open ("../point_projection/rilevamenti2.txt", "r") as myfile:
+with open ("../point_projection/rilevamenti.txt", "r") as myfile:
     data = myfile.read().splitlines()
     
 new_data = []

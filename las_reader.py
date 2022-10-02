@@ -32,7 +32,7 @@ def set_n(n_from_pc,thousants):
         n -= 10
     t = thousants
 
-def return_points():
+def return_points(full_map):
   
     df = pd.DataFrame(columns=['NF','X','Y','Z','Heading','Roll','Pitch','Time'])
 
@@ -55,36 +55,14 @@ def return_points():
     point_cloud_i = lp.read(file)
     points_i = np.vstack((point_cloud_i.x, point_cloud_i.y, point_cloud_i.z)).transpose()
     colors_i = np.vstack((point_cloud_i.red, point_cloud_i.green, point_cloud_i.blue)).transpose()
-    campionamento = 50
+    campionamento = 20
     #print("Campionamento usato " + str(campionamento))
     points_i = points_i[0::campionamento]
     colors_i = colors_i[0::campionamento]/65535.
-    return points_i
-
-
-def return_points_next():
-    
-  
-    df = pd.DataFrame(columns=['NF','X','Y','Z','Heading','Roll','Pitch','Time'])
-
-    if(n < 9):
-        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t)+"+"+str(n)+"00_"+str(t)+"+"+str(n+1)+"00.las"
-    if(n==9):
-        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t)+"+" + str(n) + "00_"+str(t+1)+"+"+ str(0) + "00.las"
-    if(n>9):
-        file = "/Users/danieleligato/Desktop/Thesis/point_projection/LAS/202107280658_Un_F_"+str(t+1)+"+" + str(n-10) + "00_"+str(t+1)+"+"+str(n+1-10) + "00.las"
-    #print("File LAS usato" + file)
-    camera = "/Users/danieleligato/Desktop/Thesis/Data/Processed/Ladybug0_1.ori.txt"
-    camera_data = pd.read_csv(camera, header=None, delimiter=r"\s+")
-    point_cloud_i = lp.read(file)
-    points_i = np.vstack((point_cloud_i.x, point_cloud_i.y, point_cloud_i.z)).transpose()
-    colors_i = np.vstack((point_cloud_i.red, point_cloud_i.green, point_cloud_i.blue)).transpose()
-    campionamento = 50
-    #print("Campionamento usato " + str(campionamento))
-    points_i = points_i[0::campionamento]
-    colors_i = colors_i[0::campionamento]/65535.
-    return points_i
-
+    if(full_map):
+        return points_i
+    else:
+        return points_i, colors_i #COMMENTA QUI PER RUNNARE IL TUTTOOOOOO
 
 
 '''resticted_points,resticted_points_c = return_points()
